@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/yalecss.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <title></title>
+</head>
+
+<body class="tcontent">
+    <div class="bs-example bs-example-tabs page1" data-example-id="togglable-tabs">
+        <ul id="myTabs" class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active">
+                <a href="#kqGongdan" id="kqGongdan-tab" role="tab" data-toggle="tab" aria-controls="kqGongdan" aria-expanded="true">可接工单</a>
+            </li>
+            <li role="presentation">
+                <a href="#gcGongdan" role="tab" id="gcGongdan-tab" data-toggle="tab" aria-controls="gcGongdan">已接工单</a>
+            </li>
+        </ul>
+        <div id="myTabContent" class="tab-content tcontent">
+            <div role="tabpanel" class="tab-pane fade in active" id="kqGongdan" aria-labelledBy="kqGongdan-tab">
+
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="gcGongdan" aria-labelledBy="gcGongdan-tab">
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="page2 tcontent">
+
+    </div>
+    
+    <div class="radius1" id="floatdia">
+        <p style="border-bottom:#ccc 1px solid; padding-bottom:0.5em; margin-top:0.5em">是否确定抢单？
+        </p>
+        <button class="radius1 floatdiabtn">取消</button>
+        <button class="radius1 floatdiabtn">确定</button>
+    </div>
+
+</body>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.xml2json.js"></script>
+<script src="js/setting.js"></script>
+<script src="js/tools.js"></script>
+<script>
+    var username, email, mobile, key, typeNum;
+    username = decodeURIComponent($.urlGet()["name"]);
+    mobile = $.urlGet()["phoneNum"];
+    key = $.urlGet()["key"];
+    typeNum = $.urlGet()["typeNum"];
+        
+    var geturl2 = "MobileAPI.asmx/GetProjectDetails";
+    var para2 = {
+        keyword: "dhccpass",
+        ispublic: 1
+    };
+
+    var kqgongdanList = [];
+    var gcgongdanList = [];
+    var curGongdan;
+
+    $(function () {
+        loadKqgongdan();
+        loadGcgongdan();
+    });
+    
+    var timeStart;
+    var secondInterval;
+
+    var loadKqgongdan = function () {
+        var kqGongdanUrl = "MobileAPI.asmx/GetKQGongdan";
+        timeStart = Date.now();
+        var kqGongdanPara = {
+            keyword: keyword,
+            pageSize: 10,
+            pageIndex: 0,
+            key: $.urlGet()["key"],
+            user_name: $.urlGet()["name"],
+            price1: 0,
+            price2: 0,
+            wdays: 1000,
+            pricelist: 0,
+            wdayslist: 0,
+            hotlist: 0
+        };
+
+        $.loadXML(kqGongdanUrl, kqGongdanPara, "get", function (xml) {
+            var obj = $.xml2json(xml, true);
+            kqgongdanList = (obj.details);
+            var htmlStr = "";
+            $('.kqgongdanItem').off('click');
+            for (var i = 0; i < kqgongdanList.length; i++) {
+                var gongdan = getGongdanInfo(kqgongdanList[i]);
+
+                htmlStr += '<div class="block radius1 kqgongdanItem" data-index=' + i + ' data-where=kqGongdan>';
+                htmlStr += '<div class="title3 underline1">' + gongdan.title + '<span class="price">' 
+                        + gongdan.balance
+                        + '</span></div><p><span class="inner_title">工单类型：</span>' + gongdan.type
+                        + '</p><p><span class="inner_title">所属项目：</span>' + gongdan.project
+                        + '</p><p class="rela"><span class="inner_title">开发周期：</span>' + gongdan.days + "天";
+                if (gongdan.seconds == "") {
+                    htmlStr += '<span class="showtime">现无人抢单</span>';
+                } else {
+                    console.log("gongdan seconds1: " + gongdan.seconds);
+                    var timeLeft = showDateSeconds(gongdan.seconds);
+                    var timestr = timeLeft.days + "天" + timeLeft.hours + "小时" + timeLeft.minutes + "分钟" 
+                                + timeLeft.seconds + "秒";
+                    htmlStr += '<span class="showtime">' + timeLeft.status + '<span class="kqtimestamp" '
+                            + 'data-index=' + i + ' data-seconds=' + gongdan.seconds + '>' + timestr 
+                            + '</span></span>';
+                }
+                htmlStr += '</p></div>';
+            }
+            $('#kqGongdan').html(htmlStr);
+            runTimeInterval($('.kqtimestamp'));
+            $('.kqgongdanItem').on('click', function () {
+                setpage2();
+                initPage2(kqgongdanList[$(this).data("index")], $(this).data("where"));
+            });
+        });
+    };
+
+    var loadGcgongdan = function () {
+        var gcGongdanUrl = "MobileAPI.asmx/GetGCGongdan";
+        var gcGongdanPara = {
+            key: keyword,
+            username: $.urlGet()["name"]
+        };
+
+        $.loadXML(gcGongdanUrl, gcGongdanPara, "post", function (xml) {
+            var obj = $.xml2json(xml, true);
+            gcgongdanList = (obj.details);
+            var htmlStr = "";
+            $('.gcgongdanItem').off('click');
+            for (var i = 0; i < gcgongdanList.length; i++) {
+
+                var gongdan = getGongdanInfo(gcgongdanList[i]);
+
+                htmlStr += '<div class="block radius1 gcgongdanItem" data-index=' + i 
+                        + ' data-where=gcGongdan>';
+                htmlStr += '<div class="title3 underline1">' + gongdan.title + '<span class="price">' 
+                        + gongdan.balance
+                        + '</span></div><p><span class="inner_title">工单类型：</span>' + gongdan.type
+                        + '</p><p><span class="inner_title">所属项目：</span>' + gongdan.project
+                        + '</p><p class="rela"><span class="inner_title">开发周期：</span>' + gongdan.days + "天";
+
+                if (gongdan.status == "已完成") {
+                    htmlStr += '<span class="showtime">已完成</span>';
+                } else {
+                    if (gongdan.seconds == "") {
+                        htmlStr += '<span class="showtime">无截止时间</span>';
+                    } else {
+                        console.log("gongdan seconds2: " + gongdan.seconds);
+                        var timeLeft = showDateSeconds(gongdan.seconds);
+                        var timestr = timeLeft.days + "天" + timeLeft.hours + "小时" + timeLeft.minutes + "分钟" 
+                                    + timeLeft.seconds + "秒";
+                        htmlStr += '<span class="showtime">' + timeLeft.status + '<span class="gctimestamp" '
+                                + 'data-index=' + i + ' data-seconds=' + gongdan.seconds + '>' + timestr 
+                                + '</span></span>';
+                    }
+                }
+                htmlStr += '</p></div>';
+            }
+            $('#gcGongdan').html(htmlStr);
+            runTimeInterval($('.gctimestamp'));
+            $('.gcgongdanItem').on('click', function () {
+                setpage2();
+                initPage2(gcgongdanList[$(this).data("index")], $(this).data("where"));
+            });
+        });
+    };
+
+    var runTimeInterval = function($value){
+        var seed = window.setInterval(function () {
+            if ($value.length > 0) {
+                for (var i=0; i<$value.length; i++){
+                    var seconds = $value.eq(i).data('seconds');
+                    var timeLeft = showDateSeconds(seconds);
+                    // var timeLeft = dateDiffToTime(Date.now(), seconds);
+                    var timestr = timeLeft.days + "天" + timeLeft.hours 
+                    + "小时" + timeLeft.minutes + "分钟" + timeLeft.seconds + "秒";
+                    $value.eq(i).html(timestr);
+                }
+            } else {
+                window.clearInterval(seed);
+            }
+        }, 1000);
+        return seed;
+    };
+    
+    var showDateSeconds = function(seconds){
+        // console.log((timeStart - Date.now())/1000 + "     " + seconds);
+        return dateLeftSeconds(parseInt(seconds + (timeStart - Date.now())/1000));
+    }
+
+    var setpage1 = function () {
+        $("#floatdia").hide();
+        $(".page2").hide();
+        $(".page1").show();
+        clearInterval(secondInterval);
+        window.location.href = 'info://' + "page" + "?" + "page1";
+    };
+    var setpage2 = function () {
+        $("#floatdia").hide();
+        $(".page1").hide();
+        $(".page2").show();
+        window.location.href = 'info://' + "page" + "?" + "page2";
+    };
+
+    var getGongdanInfo = function (obj) {
+        var gongdanTitle, gongdanid, gongdanBalance, gongdanType, gongdanTypeid, 
+        gongdanProject, gongdanDays, gongdanSeconds, gongdanStatus = "";
+        gongdanid = obj.id[0].text || "";
+        if (obj.workName)
+            gongdanTitle = obj.workName[0].text || "";
+        else
+            gongdanTitle = obj.worktitle[0].text || "";
+
+        gongdanBalance = obj.balances[0].text || "";
+        if (contains(gongdanBalance, "%", true)) {
+            gongdanBalance += "";
+        }
+
+        if (obj.worktype)
+            gongdanType = obj.worktype[0].text || "";
+        else
+            gongdanType = obj.typename[0].text || "";
+
+        if(obj.typeid)
+            gongdanTypeid = obj.typeid[0].text || "";
+
+        if (obj.demandName)
+            gongdanProject = obj.demandName[0].text || "";
+        else
+            gongdanProject = obj.projectname[0].text || "";
+
+        gongdanDays = obj.workdays[0].text || "";
+
+        if (obj.fenddate)
+            gongdanSeconds = obj.fenddate[0].text || "";
+        else
+            gongdanSeconds = obj.seconds[0].text || "";
+
+        if (obj.workstatus)
+            gongdanStatus = obj.workstatus[0].text || "";
+
+        return {
+            id: gongdanid,
+            title: gongdanTitle,
+            balance: gongdanBalance,
+            project: gongdanProject,
+            type: gongdanType,
+            typeid: gongdanTypeid,
+            days: gongdanDays,
+            seconds: gongdanSeconds,
+            status: gongdanStatus
+        };
+    };
+
+    var initPage2 = function (obj, where) {
+        console.log(obj);
+        var gongdanid = obj.id[0].text;
+        if(gongdanid == null){
+            gongdanid = obj.id;
+        }
+        
+        var projectDetailAPI = "MobileAPI.asmx/GetProjectDetailsForV1";
+        var projectDetailPara = {
+			keyword: keyword,
+			workid: gongdanid,
+			ispublic: 1
+		};
+        var gongdan;
+        $.loadXML(projectDetailAPI, projectDetailPara, "get", function (xml) {
+            var obj = $.xml2json(xml, true);
+            var results;
+            $('.page2').html("");
+            if(obj.details){
+                results = obj.details[0];
+            }else{
+                $('.page2').html("没有找到相应工单");
+                return;
+            }
+            
+			gongdan = getGongdanInfo(results);
+            curGongdan = gongdan;
+            
+            var htmlStr = "";
+			htmlStr += '<div class="block radius1 gcgongdanItem">';
+			htmlStr += '<div class="title3 underline1">' + gongdan.title + '<span class="price">' 
+					+ gongdan.balance
+					+ '</span></div><p><span class="inner_title">工单类型：</span>' + gongdan.type
+					+ '</p><p><span class="inner_title">所属项目：</span>' + gongdan.project
+					+ '</p><p class="rela"><span class="inner_title">开发周期：</span>' + gongdan.days;
+	
+			var gongdanAdded = results.addtime[0].text || "";
+			htmlStr += '<p><span class="inner_title">发布时间：</span>' + gongdanAdded + '</p>';
+			var gongdanEnddate = results.deadline[0].text || "";
+			htmlStr += '<p><span class="inner_title">截止时间：</span>' + gongdanEnddate + '</p>';
+	
+			var gongdanDetail = results.detail[0].text || "";
+			htmlStr += '<p><span class="inner_title">工单描述：</span>' + gongdanDetail + '</p>';
+	
+			if (gongdan.status == "已完成") {
+				htmlStr += '<p><span class="inner_title" style="color:#FFFFFF">title</span>' 
+                        + '<span class="showtime">已完成</span>';
+				htmlStr += '</p></div>';
+			} else {
+                if (gongdan.seconds != "") {
+					var timeLeft = showDateSeconds(parseInt(gongdan.seconds));
+					var timestr1 = timeLeft.days + "天" + timeLeft.hours + "小时" + timeLeft.minutes + "分钟" 
+					+ timeLeft.seconds + "秒";
+					htmlStr += '<p><span class="inner_title" style="color:#FFFFFF">title</span><span class="showtime">' 
+                            + timeLeft.status + '<span class="timestamp" '
+							+'data-seconds=' + gongdan.seconds + '>' + timestr1 + '</span></span>';
+					htmlStr += '</p></div>';
+				}
+                var jingbiao = results.jingbiao[0]
+                var jingbiaoNum = Object.keys(jingbiao).length / 2;
+                htmlStr += '</p></div>';
+                htmlStr += '<div class="block radius1"><p class="rela underline1">'
+                        + '<span class="inner_title">抢单会员列表：</span></p>';
+                var jbPersonAry = [];
+                if(jingbiaoNum > 0){
+                    for(var i=0; i<jingbiaoNum; i++){
+                        var jingbiaoName = jingbiao["jbperson" + i][0].text;
+                        var jingbiaoTime = jingbiao["jbtime" + i][0].text;
+                        jbPersonAry.push(jingbiaoName);
+                        htmlStr +='<p><span class="inner_title">' + jingbiaoName + '</span>'
+                                + '<span class="showtime">' + jingbiaoTime + '</span>'
+                                + '</p>';
+                    }
+                    htmlStr += '</div>';
+                }else{
+                    htmlStr += '</p></div>';
+                    htmlStr += '<div class="block radius1"><p class="rela underline1">'
+                            + '<span class="inner_title">抢单会员列表：</span><span class="showtime">'
+                            + '现无人抢单</span></p></div>';
+                }
+                
+                if (jbPersonAry.length > 0 && $.inArray(username, jbPersonAry) > -1){
+                    htmlStr += '<div class="block nobgcolor"><div class="next radius1 link1" '
+						+ 'style="background-color:#bbbbbb;"><a href="#">您已抢单</a></div></div>';
+                }else{
+                    htmlStr += '<div class="block nobgcolor"><div class="next radius1 link1 qdBtn" '
+						+ 'style="background-color:#0177d9;"><a href="#">我要抢单</a></div></div>';
+                }
+				
+            }
+
+
+        $('.page2').html(htmlStr);
+        secondInterval = runTimeInterval($('.timestamp'));
+        $('.qdBtn').on('click',function(){
+            showconfirm();
+        });
+      });
+    };
+    var showconfirm = function () {
+        var hh = $(window).height();
+        var ww = $(window).width();
+        $("#floatdia").show();
+        var h = $("#floatdia").height();
+        var w = $("#floatdia").width();
+
+        $("#floatdia").css("top", ((hh - h) / 2) + "px");
+        $("#floatdia").css("left", ((ww - w) / 2) + "px");
+        
+        $(".floatdiabtn").on("click", function(){
+           var text = $(this).text(); 
+           if(text == "确定"){
+               qiangGongdan(curGongdan);
+               $("#floatdia").hide();
+           }else if(text == "取消"){
+               $("#floatdia").hide();
+           }
+        });
+    };
+    
+    var qiangGongdan = function(gongdan){
+        var qdurl = "MobileAPI.asmx/UserQiangDan";
+        var qdpara = {
+            keyword: keyword,
+            key: $.urlGet()["key"],
+            id: gongdan.id,
+            typeId: gongdan.typeid
+        };
+        $.loadXML(qdurl, qdpara, "post", function (xml) {
+            var obj = $.xml2json(xml, true);
+            var msg;
+            if (obj.status[0].text == "1"){
+                msg = obj.msg[0].text;
+                window.location.href = 'action://' + "newToast" + "?" + msg;
+                window.location.reload();
+            }else{
+                msg = obj.msg[0].text;
+                window.location.href = 'action://' + "newToast" + "?" + msg;
+                initPage2(gongdan, where);
+            }
+        });
+    }
+
+    function contains(string, substr, isIgnoreCase) {
+        if (isIgnoreCase) {
+            string = string.toLowerCase();
+            substr = substr.toLowerCase();
+        }
+        var startChar = substr.substring(0, 1);
+        var strLen = substr.length;
+        for (var j = 0; j < string.length - strLen + 1; j++) {
+            if (string.charAt(j) == startChar)//如果匹配起始字符,开始查找
+            {
+                if (string.substring(j, j + strLen) == substr)//如果从j开始的字符与str匹配，那ok
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+</script>
+
+</html>

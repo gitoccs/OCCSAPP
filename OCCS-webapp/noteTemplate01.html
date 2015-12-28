@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>NoteTemplate01</title>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.xml2json.js"></script>
+	<script src="js/setting.js"></script>
+	<script src="js/tools.js"></script>
+</head>
+
+<body>
+	<div class="title" align="center">
+		<h3 class="templateTitle"></h3>
+	</div>
+	<div class="picture">
+	</div>
+	<div class="content">
+		<p class="templateContent">
+		</p>
+	</div>
+	<div class="links">
+		
+	</div>
+</body>
+<script>
+	var noteid, username, email, mobile, key, typeNum;
+	$(function () {
+		noteid = $.urlGet()["id"];
+		username = decodeURIComponent($.urlGet()["name"]);
+		mobile = $.urlGet()["phoneNum"];
+		key = $.urlGet()["key"];
+		typeNum = $.urlGet()["typeNum"];
+		
+		var appMessageAPI = "MobileAPI.asmx/GetAppMessage";
+        var appMessagePara = {
+			keyword: keyword,
+			MsgId: noteid
+		};
+		
+		$.loadXML(appMessageAPI, appMessagePara, "get", function (xml) {
+            var obj = $.xml2json(xml, true);
+            var results = obj.details[0].push_identity[0].text;
+			var json = jQuery.parseJSON(results);
+			var title = json.title;
+			var content = json.content.split("|")[0];
+			var puttime = json.content.split("|")[1];
+			var images = json.img;
+			var links = json.links;
+			if(title && title.length > 0){
+				$(".templateTitle").show();
+				$(".templateTitle").html(title);
+			}else{
+				$(".templateTitle").hide();
+			}
+
+			if(images && images.length>0){
+				$('.picture').show();
+				var htmlStr = ""
+				for(var i=0; i<images.length; i++){
+					htmlStr += '<img src="' + images[i] + '" alt="test image" width="100%">'
+				}
+				$('.picture').html(htmlStr);
+			}else{
+				$('.picture').hide();
+			}
+			
+			if(links && Object.keys(links).length >0){
+				$('.links').show();
+			}else{
+				$('.links').hide();
+			}
+			
+			if(content && content.length > 0){
+				$(".templateContent").show();
+				$(".templateContent").html(content);
+			}else{
+				$(".templateContent").hide();
+			}
+		});
+	});
+
+</script>
+
+</html>

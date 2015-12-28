@@ -1,0 +1,16 @@
+<results>
+    <listView>
+        <item>
+            <src>img/personMainAdv/icon3.png</src>
+            <title>适合我的工单</title>
+        </item>
+        <item>
+            <src>img/personMainAdv/icon2.jpg</src>
+            <title>活动信息</title>
+        </item>
+        <item>
+            <src>img/personMainAdv/icon1.jpg</src>
+            <title>系统通知</title>
+        </item>
+    </listView>
+</results>

@@ -1,0 +1,263 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Page Test</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="css/yalecss.css" />
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/tools.js"></script>
+    <script src="js/sendDemand.js"></script>
+        
+</head>
+
+<body>
+<div class="tcontent" id="page1">
+
+<div class="block" style="z-index:3;" >
+<table class="formitem" style="padding:0.8em 0 0 0;" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td class="color1" style="width:6em; ">* 项目名称： </td>
+<td ><input name="pjname" id="pjname" class="iteminput" style="padding-left:1.5em; width:85%;" maxlength="30" /></td>
+</tr>
+
+<tr>
+<td rowspan="2"  class="color1">* 项目类型： </td>
+<td><div class="inputframe"><span id="selecttext1" class="text">选择项目类型</span><div style="position:absolute; right:0; bottom:0;"><a href="#" onClick="showllist()"><img src="img/list1btn.svg"></a></div><div id="llist" style="z-index:99;">
+</div>
+</div></td>
+</tr>
+
+<tr>
+<td><div class="inputframe"><span id="selecttext2" class="text">选择项目类型</span><div style="position:absolute; right:0; bottom:0;"><a href="#" onClick="showlllist()"><img src="img/list1btn.svg"></a></div><div id="lllist" style="z-index:99;">
+  </div>
+</div></td>
+</tr>
+
+<tr>
+<td class="color1" style="width:6em;">* 有效期： </td>
+<td class="rela" align="center"><a href="#" id="leftbb" style="position:absolute; left:0; bottom:0;"><img src="img/left1btn.svg" /></a><span id="datalimit">5天</span><a id="rightbb" href="#"  style="position:absolute; right:0; bottom:0;"><img src="img/right1btn.svg"/></a></td>
+</tr>
+
+<tr>
+<td colspan="2" class="color1" style="width:6em;">* 项目描述： </td>
+</tr>
+<tr>
+<td colspan="2" class="color1"><textarea id="pjdesc" class="radius1" style="height:6em; width:97%; border:#ccc 2px solid; margin-left:0.5em;"></textarea></td>
+</tr>
+</tbody>
+</table>
+<p style="padding-left:1em; color:red;" id="errorinfo"></p>
+</div>
+
+<div class="block nobgcolor" style="z-index:2;">
+<div class="next radius1 link1">
+<a href="#" onClick="setnext1()">下一步</a>
+</div>
+</div>
+
+</div>
+<div class="tcontent" id='page2' style="display:none;">
+
+<div class="block" >
+<table class="formitem" style="padding:0.8em 0 0 0;" cellpadding="3" cellspacing="0">
+<tbody><tr>
+<td colspan="2">&nbsp;&nbsp;<span class="color1">*</span> 为必填内容</td>
+</tr>
+<tr>
+<td style="width:5.2em;" class="color1" align="right">* 联系人： </td>
+<td ><input name="name" id="contactname" class="iteminput" /></td></tr>
+
+<tr align="left">
+<td  class="color1" align="right">* 手机： </td>
+<td style="height:2em;" id="phoneno"><input name="phone_no" id="phone_no" class="iteminput" /></tr>
+
+<tr id="setcheck">
+<td  class="color1" align="right">* 验证码： </td>
+<td class="link1 rela">
+<table cellpadding="0" cellspacing="2" width="99%" style="padding:0;">
+<tr align="left"><td width="50%"><input name="code" id="codeinput" class="iteminput" style="width:80%;" /></td><td width="50%"><div class="bcolor1 radius2" style=" width:99%;height:2em;line-height:2em; text-align:center; color:#ffffff" id="getcode">获取验证码</div></td></tr>
+</table>
+</td>
+</tr>
+
+
+<tr>
+<td  class="color1" align="right"> 邮箱： </td>
+<td><input name="email" id="email"  class="iteminput" /></td>
+</tr>
+<tr>
+<td  class="color1" align="right"> QQ： </td>
+<td><input name="qq" id="qq"  class="iteminput" /></td>
+</tr>
+<tr>
+<td  class="color1" align="right"> 微信： </td>
+<td><input name="weixin" id="weixin" class="iteminput" /></td>
+</tr>
+<tr>
+<td colspan="2" style="height:3em;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="needsign" /> 需要进行现场实施</td>
+</tr>
+</tbody>
+</table>
+<p style="padding-left:1em; color:red;" id="errorinfo2"></p>
+</div>
+
+<div class="block nobgcolor"  style="z-index:2;">
+<div class="link1">
+<table cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td width="49%" class="radius1" align="center" style="background-color:#F60;height:3em;"><a href="#" onClick="setpage1()">上一步</a></td>
+<td width="1%"> </td>
+<td  width="49%" class="radius1" align="center" style="background-color:#F60;;"><a href="#" onClick="setnext2()">下一步</a></td></tr>
+</table>
+</div>
+</div>
+
+</div>
+
+<div class="tcontent" id="page3" style="display:none;">
+<div class="block nobgcolor" >
+<p style="margin:0; padding:0 0 0 1em;">请确认发布需求的信息内容</p>
+</div>
+<div class="block">
+<table class="formitem"cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td style="width:6em;" align="right">项目名称： </td>
+<td id="pjname_">大连银行系统</td></tr>
+
+<tr>
+<td align="right">项目类型： </td>
+<td style="height:2em;" id="pjtype_">项目解决方案 </td>
+</tr>
+
+<tr>
+<td  align="right">有效期： </td>
+<td style="height:2em;" id="validday_">20天 </td>
+</tr>
+
+<tr class="underline1">
+<td  align="right" valign="top">项目描述： </td>
+<td style="height:2em;" id="pjdesc_">这是一个关于这是一个关于这是一个关于这是一个关于这是一个关于这是一个关于这是一个关于这是一个关于这是一个关于这是一个关于…… </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="block"  style="margin:0.1em 0.5em 0 0.5em;">
+<table class="formitem"cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td style="width:6em;" align="right">联系人： </td>
+<td id="name_">王经理</td></tr>
+
+<tr>
+<td style="width:6em;" align="right">手机： </td>
+<td id="phone_">1391690xxxx</td></tr>
+
+<tr>
+<td style="width:6em;" align="right">邮箱： </td>
+<td id="email_">wangzukang@qq.com</td></tr>
+
+<tr>
+<td style="width:6em;" align="right">QQ： </td>
+<td id="qq_">wangzukang@qq.com</td></tr>
+
+
+<tr>
+<td style="width:6em;" align="right">微信： </td>
+<td id="weixin_">1391690xxxx</td></tr>
+
+<tr>
+<td colspan="2" style="padding-left:1.5em;" id="needsign_">项目不需要现场实施</td></tr>
+<tr>
+<td colspan="2" style="padding-left:1.5em;"><input type="checkbox" id="readed"/>我已阅读并接受<span onClick="showcontact()"><u>《项目承接协议》</u></span></td></tr>
+
+</tbody>
+</table>
+<p style="padding-left:1em; color:red; display:none;" id="errorinfo3"></p>
+</div>
+
+<div class="block nobgcolor"  style="z-index:2;">
+<div class="link1">
+<table cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td width="49%" class="radius1" align="center" style="background-color:#F60;height:3em;"><a href="#" onClick="setpage2()">上一步</a></td>
+<td width="1%"> </td>
+<td  width="49%" class="radius1" align="center" style="background-color:#F60;;"><a href="#" onClick="setconfirm()">确认发布</a></td></tr>
+</table>
+</div>
+</div>
+
+<div class="radius1" id="floatdia">
+    <p style="border-bottom:#ccc 1px solid; padding-bottom:0.5em;">发布成功！
+        <br>OCCS将于24小时内与您联系
+        <br>OCCS客服电话：400-058-6227
+    </p>
+    <div class="radius1 floatdiabtn" onClick="diahide()">确定</div>
+</div>
+
+
+</div>
+<div class="tcontent" id="page4" style="display:none;">
+<div class="block">
+<p>第一条：为了规范OCCS网项目需求发布的相关行为，维护OCCS网正常运营秩序，基于《OCCS网服务协议》，制定本规则。<br>
+<br>
+第二条：网站会员发布项目需求信息，需要符合国家法律法规以及OCCS网关于项目需求发布的相关规定。<br>
+<br>
+第三条：凡是违反宪法精神和中华人民共和国相关法律法规、带有民族歧视性、夸大宣传并带有欺骗性、有损于社会主义道德风尚或者有其他不良影响的需求，OCCS网将拒绝提供服务。<br>
+1、包括但不限于以下类型的需求，由于违反法律、法规和OCCS网相关规则而禁止发布：<br>
+A、软件破解、程序破解类需求；<br>
+B、游戏外挂、程序外挂类需求；<br>
+C、盗取网银账号、游戏账号类需求；<br>
+D、侵犯第三方知识产权的需求；<br>
+E、侵犯第三方权利的需求；<br>
+F、木马、黑客程序等有损网络安全类需求；<br>
+G、涉黄、赌博类需求；<br>
+H、散布网络谣言类需求；<br>
+I、疑似宣传或广告内容类的需求 ；<br>
+J、其他违反法律、法规、行政规章等相关规定的需求。<br>
+2、以下需求可能对交易参与方或者第三方带来损害而禁止发布：<br>
+A、论文代写类需求；<br>
+B、需要手机验证后才能参与的需求；<br>
+C、需要银行账号验证或者付费才能参与的需求；<br>
+D、以招兼职为名进行的欺骗型需求；<br>
+E、可能套取需求参与方身份证、邮箱、手机号、银行账号等个人或者机构隐私信息的需求；<br>
+F、刷钻、刷信用、账号买卖等需求（允许交易的游戏账号除外）；<br>
+G、虚假信息的需求；<br>
+H、需求描述通过链接等方式逃避OCCS网审核的需求；<br>
+I、可能给他人或者其他机构带来损害的需求；<br>
+J、其他违背社会伦理或社会主流价值观的需求；<br>
+K、需要线下转账、充值或使用资金的需求。<br>
+<br>
+第四条：对于需求描述的要求。<br>
+1、需求描述需要准确、完整和详细，并代表需求发布者的真实意愿；<br>
+2、不同需求类型禁止合并发布，一个需求只能进行一件事务的处理；<br>
+3、凡是涉嫌诈骗、欺骗、虚假承诺、需要需求参与者先行承担成本以及跳转站外链接的需求，均被OCCS认定为有交易风险的需求，OCCS网有权关闭该需求。<br>
+<br>
+第五条：对于需求发布的要求。<br>
+1、需求一经发布，补充说明不得与原需求相冲突；<br>
+2、同一需求禁止重复发布，若用户重复发布，网站将关闭重复的需求；<br>
+3、禁止通过发布需求来推广自己或他人的其他需求，一旦发现，网站将按“垃圾广告”的违规行为进行处罚；<br>
+4、发布需求时，必须填写正确的联系方式，如手机号码或电子邮箱，确保OCCS能与需求发布人员取得联系，如果联系方式不正确导致不能够及时联系到发布者，而产生的后果与OCCS网无关；<br>
+5、填写需求信息提交后，需经过审核通过后方可发布到OCCS网，若未通过审核则视为发需求信息无效。<br>
+<br>
+第六条：对于需求审核的要求。<br>
+需求发布成功后，OCCS会根据发布者填写的需求信息进行初步审核，如果填写的资料不真实，导致的一切纠纷，将由发布者负责，OCCS概不负责。<br>
+<br>
+第七条：对于软件项目开发规则确认的要求。<br>
+需求提交之前，发布者要仔细阅读《软件项目开发规则》，如果发布者提交需求，则OCCS视为发布者已仔细阅读《软件项目开发规则》，同意并严格遵守该规则中的所有条款。<br>
+<br>
+第八条：对于违规行为处理的要求。<br>
+针对发布违规需求的会员，OCCS享有在不通知任何人的情况下，停止其账号使用的权利，终止该会员在OCCS网的一切活动行为。针对会员发布的违规需求，OCCS有权在不通知任何人的情况下，拒绝该需求的发布请求，甚至删除该需求内容。<br>
+<br>
+第九条 本规则最终解释权归OCCS网所有。<br>
+<br>
+第十条 本规则自发布之日起实行。<br>
+</p>
+</div>
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,614 @@
+/* CSS Document */
+body {
+    text-align: center;
+    background-color: #ededed;
+    margin: 0;
+    padding: 0;
+}
+
+.tcontent {
+    text-align: left;
+    font-family: "微软雅黑", "黑体";
+    background-color: #ededed;
+    padding: 0 0 0.5em 0;
+    margin: 0;
+    height: 100%;
+    position: relative;
+}
+
+.tcontent .block {
+    background-color: #FFFFFF;
+    padding: 0;
+    margin: 0.5em 0.5em 0 0.5em;
+    position: relative;
+    box-shadow: 2px 2px 5px #b9b9b9;
+}
+
+.tcontent .nobgcolor {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.tcontent .radius1 {
+    border-radius: 0.4em;
+}
+
+.tcontent .radius1l {
+    border-radius: 0.4em 0em 0em 0.4em;
+}
+
+.tcontent .radius1r {
+    border-radius: 0em 0.4em 0.4em 0em;
+}
+
+.tcontent .radius2 {
+    border-radius: 0.2em;
+}
+
+.tcontent .block .span {
+    margin: 0 0 0.1em 0;
+}
+
+.tcontent .collap {
+    padding: 0 1em 0 1em;
+}
+
+.tcontent .block p {
+    font-size: small;
+    padding: 0.7em;
+    margin: 0;
+}
+
+.tcontent .block .inner_title {
+    color: #666;
+}
+
+.tcontent .block .desc {
+    display: block;
+    margin-top: 0.5em;
+    font-size: small;
+    line-height: 2em;
+}
+
+.tcontent .block .rela {
+    position: relative;
+}
+
+.tcontent .block .showtime {
+    float: right;
+    color: #F00;
+}
+
+.barbtn {
+    font-size: large;
+}
+
+.tcontent .block div.title2 {
+    font-weight: bold;
+    font-size: large;
+    padding: 0.7em;
+    margin: 0;
+    color: #006;
+    position: relative;
+}
+
+.tcontent .block div.title3 {
+    font-weight: bold;
+    font-size: large;
+    padding: 0.7em;
+    margin: 0 0 0.1em 0;
+    color: #006;
+    position: relative;
+}
+
+.tcontent .block div.title4 {
+    border-top-right-radius: 0.4em;
+    border-top-left-radius: 0.4em;
+    font-weight: bold;
+    font-size: large;
+    padding: 0.7em;
+    margin: 0 0 0.1em 0;
+    color: #ffffff;
+    position: relative;
+}
+
+.tcontent .block div.color1 {
+    background: #356bb0;
+}
+
+.tcontent .block div.color2 {
+    background: #ba505b;
+}
+
+.tcontent .block div.color3 {
+    background: #6cbb69;
+}
+
+.tcontent .block .underline1 {
+    border-bottom: #ededed 1px solid;
+}
+
+.tcontent .block p {
+    line-height: 1em;
+}
+
+.tcontent .block span.price {
+    font-weight: normal;
+    font-size: medium;
+    position: absolute;
+    right: 0.5em;
+
+}
+
+.tcontent .block div.collaptitle {
+    position: relative;
+    font-weight: bold;
+    font-size: large;
+    padding: 0.7em;
+    color: #aaa;
+    background: url(../img/rightbtn.svg) no-repeat right 0.7em center;
+}
+
+.tcontent .block div.collaptitleexp {
+    font-weight: bold;
+    font-size: large;
+    padding: 0.7em;
+    color: #000;
+    background: url(../img/downbtn.svg) no-repeat right 0.7em center;
+}
+
+.tcontent .block div.collapcontent {
+    display: none;
+    color: #aaa;
+}
+
+.tcontent .block div.collapcontent a {
+    font-weight: bold;
+    font-size: large;
+    padding: 0 0 0 3em;
+    margin: 0;
+    line-height: 3em;
+    color: #000;
+    background: url(../img/rightbtn.svg) no-repeat right 0.7em center;
+}
+
+.tcontent .block div.collapcontent div {
+    height: 3em;
+    position: relative;
+}
+
+.tcontent .block div.collapcontent div.collapcontentdesc {
+    height: auto;
+    padding: 0.8em;
+    color: #000;
+}
+
+.tcontent .block div.collapcontent div.icon001 {
+    background: url(../img/icon001.png) no-repeat left 0.3em center;
+}
+
+.tcontent .block div.collapcontent div.iconadd {
+    position: absolute;
+    right: 3em;
+    top: 0.1em;
+}
+
+.tcontent .block div.collaptitle div.iconadd {
+    position: absolute;
+    right: 2.5em;
+    top: 0.1em;
+}
+
+.tcontent .block a {
+    display: block;
+}
+
+.tcontent .block a:Link {
+    text-decoration: none;
+}
+
+.tcontent .block a:hover {
+    text-decoration: none;
+}
+
+.tcontent .collap {
+    margin: 0;
+    padding: 0;
+}
+
+.tcontent .block .collaptitle a:Link {
+    color: #333;
+}
+
+.tcontent .block .collaptitle a:hover {
+    color: #333;
+}
+
+.tcontent .block .collapcontent a:Link {
+    color: #333;
+}
+
+.tcontent .block .collapcontent a:hover {
+    color: #333;
+}
+
+.tcontent .block .list1 {
+    line-height: 2em;
+    font-size: small;
+    padding: 0 0.8em 0 0.8em;
+}
+
+.tcontent .block .list1 .left .right {
+    text-align: right;
+    float: right;
+}
+
+.tcontent .block .formitem {
+    font-size: medium;
+    width: 95%;
+    margin-right: 0.8em;
+}
+
+.tcontent .block .formitem tr {
+    height: 2.5em;
+}
+
+.tcontent .block .formitem tr td {
+    padding: 0.2em;
+}
+
+.tcontent .block .formitem .iteminput {
+    width: 100%;
+    height: 2em;
+}
+
+.tcontent .block .next {
+    width: 100%;
+    height: 3em;
+    color: #fff;
+    background-color: #F60;
+    line-height: 3em;
+    text-align: center;
+}
+
+.tcontent .block .link1 a:Link,
+.tcontent .block .link1 a:active,
+.tcontent .block .link1 a:hover,
+.tcontent .block .link1 a:visited {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.tcontent .color1 {
+    color: #F60;
+}
+
+.tcontent .bcolor1 {
+    background-color: #F60;
+}
+
+.tcontent .block .bcolor2 {
+    background-color: #0066d8;
+
+}
+
+.tcontent .block .inputframe {
+    padding-left: 1.5em;
+    height: 2.8em;
+    position: relative;
+}
+
+.tcontent .block .fright {
+    float: right;
+}
+
+.tcontent .block .text {
+    line-height: 2.8em;
+}
+
+.tcontent .block #llist,
+.tcontent .block #lllist {
+    z-index: 2147483647;
+    position: absolute;
+    top: 2.8em;
+    left: 0;
+    width: 100%;
+    display: none;
+}
+
+.tcontent .block #llist p,
+.tcontent .block #lllist p {
+    clear: both;
+    width: 100%;
+    background-color: #999;
+}
+
+.tcontent .block div.collapcontent div.icon01_01 {
+    background: url(../img/workicon/icon01/icon01_01.png) no-repeat left 0.3em center;
+}
+
+.tcontent .block div.collapcontent div.icon01_02 {
+    background: url(../img/workicon/icon01/icon01_02.png) no-repeat left 0.3em center;
+}
+
+.tcontent .block div.collapcontent div.icon01_03 {
+    background: url(../img/workicon/icon01/icon01_03.png) no-repeat left 0.3em center;
+}
+
+.tcontent .block div.collapcontent div.icon01_04 {
+    background: url(../img/workicon/icon01/icon01_04.png) no-repeat left 0.3em center;
+}
+
+.tcontent .block div.collapcontent div.icon01_05 {
+    background: url(../img/workicon/icon01/icon01_05.png) no-repeat left 0.3em center;
+}
+
+.tcontent .block div.collapcontent div.icon01_06 {
+    background: url(../img/workicon/icon01/icon01_06.png) no-repeat left 0.3em center;
+}
+
+.tcontent .block div.collapcontent div.icon01_07 {
+    background: url(../img/workicon/icon01/icon01_07.png) no-repeat left 0.3em center;
+}
+
+.tcontent .block div.collapcontent div.icon01_08 {
+    background: url(../img/workicon/icon01/icon01_08.png) no-repeat left 0.3em center;
+}
+
+.tcontent .block div.collapcontent div.icon01_09 {
+    background: url(../img/workicon/icon01/icon01_09.png) no-repeat left 0.3em center;
+}
+
+.tcontent .block div.collapcontent div.icon01_10 {
+    background: url(../img/workicon/icon01/icon01_10.png) no-repeat left 0.3em center;
+}
+
+.tcontent .block div.collapcontent div.icon01_11 {
+    background: url(../img/workicon/icon01/icon01_11.png) no-repeat left 0.3em center;
+}
+
+.tcontent .block div.collapcontent div.icon01_12 {
+    background: url(../img/workicon/icon01/icon01_12.png) no-repeat left 0.3em center;
+}
+
+.tcontent .block div.collapcontent div.icon01_13 {
+    background: url(../img/workicon/icon01/icon01_13.png) no-repeat left 0.3em center;
+}
+
+.tcontent .block div.collapcontent div.icon01_14 {
+    background: url(../img/workicon/icon01/icon01_14.png) no-repeat left 0.3em center;
+}
+
+.tcontent .block div.collapcontent div.icon02_01 {
+    background: url(../img/workicon/icon02/icon02_01.png) no-repeat left 0.3em center;
+}
+
+.tcontent .block div.collapcontent div.icon02_02 {
+    background: url(../img/workicon/icon02/icon02_02.png) no-repeat left 0.3em center;
+}
+
+.tcontent .block div.collapcontent div.icon02_03 {
+    background: url(../img/workicon/icon02/icon02_03.png) no-repeat left 0.3em center;
+}
+
+.tcontent .block div.collapcontent div.icon02_04 {
+    background: url(../img/workicon/icon02/icon02_04.png) no-repeat left 0.3em center;
+}
+
+.tcontent .block div.collapcontent div.icon02_05 {
+    background: url(../img/workicon/icon02/icon02_05.png) no-repeat left 0.3em center;
+}
+
+.tcontent .block div.collapcontent div.icon02_06 {
+    background: url(../img/workicon/icon02/icon02_06.png) no-repeat left 0.3em center;
+}
+
+.tcontent .block div.collapcontent div.icon02_07 {
+    background: url(../img/workicon/icon02/icon02_07.png) no-repeat left 0.3em center;
+}
+
+.tcontent .block div.collapcontent div.icon03_01 {
+    background: url(../img/workicon/icon03/icon03_01.png) no-repeat left 0.3em center;
+}
+
+.tcontent .block div.collapcontent div.icon03_02 {
+    background: url(../img/workicon/icon03/icon03_02.png) no-repeat left 0.3em center;
+}
+
+.tcontent .block div.collapcontent div.icon04_01 {
+    background: url(../img/workicon/icon04/icon04_01.png) no-repeat left 0.3em center;
+}
+
+.tcontent .block div.collapcontent div.icon04_02 {
+    background: url(../img/workicon/icon04/icon04_02.png) no-repeat left 0.3em center;
+}
+
+.tcontent .block div.collapcontent div.icon04_03 {
+    background: url(../img/workicon/icon04/icon04_03.png) no-repeat left 0.3em center;
+}
+
+.tcontent .block div.collapcontent div.icon04_04 {
+    background: url(../img/workicon/icon04/icon04_04.png) no-repeat left 0.3em center;
+}
+
+/*****************  slidershow css  ***************/
+
+.diy-slideshow {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.diy-slideshow figure {
+    position: absolute;
+    opacity: 0;
+    transition: 1s opacity;
+}
+
+.diy-slideshow figcaption {
+    position: absolute;
+    font-family: sans-serif;
+    font-size: .8em;
+    bottom: .75em;
+    right: .35em;
+    padding: .25em;
+    color: #fff;
+    background: rgba(0, 0, 0, .25);
+    border-radius: 2px;
+}
+
+.diy-slideshow figcaption a {
+    color: #fff;
+}
+
+.diy-slideshow figure.show {
+    opacity: 1;
+    position: static;
+    transition: 1s opacity;
+}
+
+.diy-slideshow .next, .prev {
+    color: #fff;
+    position: absolute;
+    background: rgba(0, 0, 0, .6);
+    top: 50%;
+    z-index: 1;
+    font-size: 2em;
+    margin-top: -.75em;
+    opacity: .3;
+    user-select: none;
+}
+
+.diy-slideshow .next:hover, .prev:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.diy-slideshow .next {
+    right: 0;
+    padding: 10px 5px 15px 10px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.diy-slideshow .prev {
+    left: 0;
+    padding: 10px 10px 15px 5px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.diy-slideshow figure {
+    position: absolute;
+    opacity: 0;
+    transition: 1s opacity;
+}
+
+.diy-slideshow figure.show {
+    opacity: 1;
+    position: static;
+    transition: 1s opacity;
+}
+
+#person-main-listview .badge {
+    background-color: #910002;
+    position: absolute;
+    left: 60px;
+}
+
+.listViewCell01 {
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle;
+    padding-left: 20px
+}
+
+.listViewCell01-title {
+    font-size: large;
+    margin-bottom: 3px;
+    vertical-align: middle
+}
+
+.listViewCell01-text {
+    color: #808080;
+    margin-bottom: 0px;
+}
+
+.listViewCell01-timetxt {
+    margin-top: 5px;
+    display: table-cell;
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    text-align: right
+}
+
+#person-main-listview button.noPadding {
+    padding: 0px;
+}
+
+#person-main-listview button {
+    padding-bottom: 5px;
+    padding-top: 5px
+}
+
+#person-main-listview li.noPadding {
+    padding: 0px;
+}
+
+#person-main-listview li {
+    padding-bottom: 5px;
+    padding-top: 5px
+}
+
+#helpIndexMainButtons button {
+    min-width: 50px;
+    width: 150px;
+    padding:5px;
+    margin: 10px;
+}
+
+#helpIndexMainButtons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+#aboutOccsMainDiv {
+    width: 100%
+}
+
+#aboutOccsMainDiv img{
+    width: 100%
+}
+
+#contactMainDiv{
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#contactNameTxt {
+    color: #910002;
+}
+
+#floatdia {
+    width:70%; 
+    position:absolute; 
+    z-index:99; 
+    padding-bottom:0.5em;
+    text-align:center; 
+    color:#fff; 
+    background:rgba(0,0,0,0.5);
+    display:none;
+}
+
+.floatdiabtn{
+    width:5em; 
+    background-color:#ffffff;
+    margin:auto;line-height:2em; 
+    color:#000;
+    margin-left: 5pt;
+    margin-right: 5pt;
+}
+	

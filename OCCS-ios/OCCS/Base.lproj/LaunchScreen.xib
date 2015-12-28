@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo01" translatesAutoresizingMaskIntoConstraints="NO" id="NNp-2U-I1e">
+                    <rect key="frame" x="189" y="74" width="102" height="189"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="189" id="Zba-YZ-RiM"/>
+                        <constraint firstAttribute="width" constant="102" id="sO1-CA-Rpd"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="txt01" translatesAutoresizingMaskIntoConstraints="NO" id="Y6S-dO-55X">
+                    <rect key="frame" x="133" y="349" width="215" height="70"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="Snu-YZ-q0P"/>
+                        <constraint firstAttribute="width" constant="215" id="mKD-F2-YaC"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="Y6S-dO-55X" secondAttribute="centerX" id="1jz-ku-grl"/>
+                <constraint firstItem="NNp-2U-I1e" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="74" id="QB3-uq-5in"/>
+                <constraint firstAttribute="centerX" secondItem="NNp-2U-I1e" secondAttribute="centerX" id="xt7-aL-uJs"/>
+                <constraint firstItem="Y6S-dO-55X" firstAttribute="top" secondItem="NNp-2U-I1e" secondAttribute="bottom" constant="86" id="yY6-80-aE1"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="150" y="319"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="logo01" width="231" height="425"/>
+        <image name="txt01" width="429" height="140"/>
+    </resources>
+</document>

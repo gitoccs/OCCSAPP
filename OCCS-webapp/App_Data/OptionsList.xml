@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<datalist>
+  <options id="1002" name="项目预算">
+    <option id="5" name="详谈" sort="1" />
+    <option id="10" name="小于￥50,000" sort="2" />
+    <option id="20" name="￥50,000-￥100,000" sort="3" />
+    <option id="30" name="￥100,000-￥200,000" sort="4" />
+    <option id="40" name="￥200,000-￥500,000" sort="5" />
+    <option id="50" name="￥500,000-￥700,000" sort="6" />
+    <option id="60" name="￥700,000-￥1,000,000" sort="7" />
+    <option id="70" name="大于￥1,000,000" sort="8" />
+  </options>
+  <options id="1003" name="项目工期">
+    <option id="10" name="详谈" sort="1" />
+    <option id="20" name="5-10天" sort="2" />
+    <option id="30" name="10-20天" sort="3" />
+    <option id="40" name="20-30天" sort="4" />
+    <option id="50" name="30-60天" sort="5" />
+    <option id="60" name="60-90天" sort="6" />
+    <option id="70" name="90-120天" sort="7" />
+    <option id="80" name="120天以上" sort="8" />
+  </options>
+  <options id="1007" name="菜单类型[SysMenu-target]">
+    <option id="href" name="链接" sort="1" />
+    <option id="add" name="添加" sort="2" />
+    <option id="edit" name="编辑" sort="3" />
+    <option id="remove" name="删除" sort="4" />
+    <option id="check" name="审核" sort="5" />
+    <option id="pay" name="付款、结算" sort="6" />
+    <option id="view" name="查看、详情" sort="7" />
+    <option id="report" name="工作报告" sort="8" />
+    <option id="guide" name="导航" sort="99" />
+  </options>
+  <options id="1009" name="证件类型[Users-idtype]">
+    <option id="1" name="身份证" sort="1" />
+    <option id="2" name="护照" sort="2" />
+    <option id="3" name="军官证" sort="3" />
+    <option id="4" name="其它" sort="4" />
+  </options>
+  <options id="1010" name="学历">
+    <option id="博士" name="博士" sort="2" />
+    <option id="研究生" name="研究生" sort="3" />
+    <option id="本科" name="本科" sort="4" />
+    <option id="大专" name="大专" sort="5" />
+    <option id="中专" name="中专" sort="6" />
+    <option id="高中" name="高中" sort="7" />
+    <option id="其它" name="其它" sort="9" />
+  </options>
+  <options id="1011" name="职务">
+    <option id="董事长" name="董事长" sort="1" />
+    <option id="科长" name="科长" sort="2" />
+    <option id="处长" name="处长" sort="3" />
+    <option id="副科长" name="副科长" sort="4" />
+    <option id="副处长" name="副处长" sort="5" />
+    <option id="处长助理" name="处长助理" sort="6" />
+    <option id="副行长" name="副行长" sort="7" />
+    <option id="业务主管" name="业务主管" sort="8" />
+    <option id="厂长" name="厂长" sort="9" />
+    <option id="财务处长" name="财务处长" sort="10" />
+    <option id="副董事长" name="副董事长" sort="11" />
+    <option id="总经理" name="总经理" sort="12" />
+    <option id="副总经理" name="副总经理" sort="13" />
+    <option id="经理" name="经理" sort="14" />
+    <option id="高级工程师" name="高级工程师" sort="15" />
+    <option id="工程师" name="工程师" sort="16" />
+    <option id="助理工程师" name="助理工程师" sort="17" />
+    <option id="无" name="无" sort="99" />
+  </options>
+  <options id="1012" name="预付款方式">
+    <option id="1" name="详谈" sort="1" />
+    <option id="2" name="预付定金，阶段性确认，项目结束付款" sort="2" />
+    <option id="3" name="预付定金，阶段性确认并付款" sort="3" />
+    <option id="4" name="不预付定金，阶段性确认，项目结束付款" sort="4" />
+  </options>
+  <options id="1013" name="职位类型">
+    <option id="1" name="软件云工厂" sort="1" />
+    <option id="2" name="商务中心" sort="2" />
+    <option id="3" name="毛遂自荐" sort="3" />
+    <option id="4" name="高级顾问" sort="4" />
+  </options>
+  <options id="1014" name="工单难度系数">
+    <option id="0.1" name="0.1" sort="1" />
+    <option id="0.2" name="0.2" sort="2" />
+    <option id="0.3" name="0.3" sort="3" />
+    <option id="0.4" name="0.4" sort="4" />
+    <option id="0.5" name="0.5" sort="5" />
+    <option id="0.6" name="0.6" sort="6" />
+    <option id="0.7" name="0.7" sort="7" />
+    <option id="0.8" name="0.8" sort="8" />
+    <option id="0.9" name="0.9" sort="9" />
+    <option id="1.0" name="1.0" sort="10" />
+    <option id="1.1" name="1.1" sort="11" />
+    <option id="1.2" name="1.2" sort="12" />
+    <option id="1.3" name="1.3" sort="13" />
+    <option id="1.4" name="1.4" sort="14" />
+    <option id="1.5" name="1.5" sort="15" />
+    <option id="1.6" name="1.6" sort="16" />
+    <option id="1.7" name="1.7" sort="17" />
+    <option id="1.8" name="1.8" sort="18" />
+    <option id="1.9" name="1.9" sort="19" />
+    <option id="2.0" name="2.0" sort="20" />
+  </options>
+  <options id="1015" name="行业分类">
+    <option id="A" name="农、林、牧、渔业" />
+    <option id="B" name="采矿业" />
+    <option id="C" name="制造业" />
+    <option id="D" name="电力、热力、燃气及水生产和供应业" />
+    <option id="E" name="建筑业" />
+    <option id="F" name="批发和零售业" />
+    <option id="G" name="交通运输、仓储和邮政业" />
+    <option id="H" name="住宿和餐饮业" />
+    <option id="I" name="信息传输、软件和信息技术服务业" />
+    <option id="J" name="金融业" />
+    <option id="K" name="房地产业" />
+    <option id="L" name="租赁和商务服务业" />
+    <option id="M" name="科学研究和技术服务业" />
+    <option id="N" name="水利、环境和公共设施管理业" />
+    <option id="O" name="居民服务、修理和其他服务业" />
+    <option id="P" name="教育" />
+    <option id="Q" name="卫生和社会工作" />
+    <option id="R" name="文化、体育和娱乐业" />
+    <option id="S" name="公共管理、社会保障和社会组织" />
+    <option id="T" name="国际组织" />
+  </options>
+  <options id="1016" name="工单定价参数值类型">
+    <option id="int" name="整数" sort="1" />
+    <option id="decimal" name="小数" sort="2" />
+    <option id="string" name="字符串" sort="3" />
+  </options>
+  <options id="1017" name="工单定价完成时间单位">
+    <option id="d" name="天" sort="1" />
+    <option id="h" name="小时" sort="2" />
+    <option id="m" name="分钟" sort="3" />
+  </options>
+  <options id="1018" name="公司规模">
+    <option id="10" name="大型企业" />
+    <option id="20" name="中型企业" />
+    <option id="30" name="小型企业" />
+  </options>
+  <!--产品添加-->
+  <options id="1020" name="产品种类">
+    <option id="软件" name="软件" />
+    <option id="解决方案" name="解决方案" />
+    <option id="需求分析" name="需求分析" />
+    <option id="概要设计" name="概要设计" />
+    <option id="组件库" name="组件库" />
+    <option id="工具类" name="工具类" />
+  </options>
+  <options id="1021" name="开发语言">
+    <option id="Java" name="Java" />
+    <option id="C" name="C" />
+    <option id="C++" name="C++" />
+    <option id="C#" name="C#" />
+    <option id="PHP" name="PHP" />
+    <option id="Perl" name="Perl" />
+    <option id="Objective-C" name="Objective-C" />
+  </options>
+  <options id="1022" name="数据库">
+    <option id="SQLServer" name="SQLServer" />
+    <option id="DB2" name="DB2" />
+    <option id="Oracel" name="Oracel" />
+    <option id="MySql" name="MySql" />
+    <option id="Informix" name="Informix" />
+    <option id="Sysbase" name="Sysbase" />
+  </options>
+  <options id="1023" name="操作系统">
+    <option id="Windows" name="Windows" />
+    <option id="Unix" name="Unix" />
+    <option id="Linux" name="Linux" />
+    <option id="AIX" name="AIX" />
+    <option id="MAC" name="MAC" />
+  </options>
+  <options id="1024" name="指标数录入环节">
+    <option id="1" name="组件个数" />
+    <option id="2" name="JSP页面个数" />
+    <option id="3" name="域个数" />
+    <option id="4" name="表单+列表个数" />
+    <option id="5" name="组件业务处理步骤" />
+    <option id="6" name="业务动作个数" />
+    <option id="7" name="测试用例个数" />
+  </options>
+  <options id="1025" name="软件结构">
+    <option id="B/S" name="B/S" />
+    <option id="C/S" name="C/S" />
+    <option id="嵌入式" name="嵌入式" />
+  </options>
+  <options id="1026" name="邮件订阅类别">
+    <option id="1" name="工厂工单" />
+    <option id="2" name="商务工单" />
+    <option id="3" name="软件云超市" />
+    <option id="4" name="会员信息" />
+    <option id="5" name="创建云工厂" />
+    <option id="6" name="应用云租赁" />
+    <option id="7" name="人才交流中心" />
+  </options>
+  <options id="1027" name="需求开发方式">
+    <option id="0" name="不限" sort="0" />
+    <option id="1" name="组件化" sort="1" />
+    <option id="2" name="模块化" sort="2" />    
+  </options>
+  <options id="1028" name="任务工单类型">
+    <option id="1" name="普通工单" sort="1" />
+    <option id="2" name="一次性工单" sort="2" />
+    <option id="3" name="竞标工单" sort="3" />
+  </options>
+  <options id="1029" name="模块化流程">
+    <option id="1001" name="需求分析|需求分析文档客户验收通过" sort="1" />
+    <option id="1002" name="系统设计|系统设计文档客户验收通过" sort="2" />
+    <option id="1003" name="功能开发|系统功能客户测试通过" sort="3" />
+    <option id="1004" name="实施|系统实施客户验收通过" sort="4" />
+    <option id="1005" name="售后|售后结束" sort="5" />
+  </options>
+  <options id="1030" name="组件化流程">
+    <option id="1001" name="需求分析|需求分析文档客户验收通过" sort="1" />
+    <option id="1002" name="系统设计|系统设计文档客户验收通过" sort="2" />
+    <option id="1003" name="功能开发|系统功能客户测试通过" sort="3" />
+    <option id="1004" name="实施|系统实施客户验收通过" sort="4" />
+    <option id="1005" name="售后|售后结束" sort="5" />
+  </options>
+  <!--工单平台操作状态-->
+  <options id="2001" name="项目解决方案">
+    <option id="100" name="工单竞拍" />
+    <option id="101" name="工单分配" />
+    <option id="110" name="方案编写" />
+    <option id="120" name="方案提交审核" />
+    <option id="125" name="方案被取消" />
+    <option id="130" name="方案参与竞标" />
+    <option id="140" name="方案被采纳需要修改" />
+    <option id="150" name="方案中标" />
+    <option id="160" name="方案被否决" />
+    <option id="180" name="工单结算" />
+    <option id="190" name="工单结束" />
+  </options>
+  <options id="2002" name="业务需求分析">
+    <option id="100" name="工单竞拍" />
+    <option id="101" name="工单分配" />
+    <option id="110" name="需求分析编写" />
+    <option id="120" name="验收系统设计文档" />
+    <option id="180" name="工单结算" />
+    <option id="190" name="工单结束" />
+  </options>
+  <options id="2003" name="系统设计">
+    <option id="100" name="工单竞拍" />
+    <option id="101" name="工单分配" />
+    <option id="110" name="系统设计编写" />
+    <option id="120" name="开发准备" />
+    <option id="130" name="开发管理" />
+    <option id="140" name="集成测试" />
+    <option id="150" name="客户确认系统" />
+    <option id="160" name="实施准备" />
+    <option id="170" name="项目实施" />
+    <option id="180" name="工单结算" />
+    <option id="190" name="工单结束" />
+  </options>
+  <options id="2004" name="业务功能拓扑">
+    <option id="100" name="工单竞拍" />
+    <option id="101" name="工单分配" />
+    <option id="110" name="整理配置文档" />
+    <option id="120" name="验收平台配置" />
+    <option id="130" name="编写测试式样书" />
+    <option id="140" name="单元测试" />
+    <option id="150" name="交易功能确认" />
+    <option id="160" name="编写操作手册" />
+    <option id="170" name="工单结算" />
+    <option id="180" name="拓扑维护" />
+    <option id="190" name="工单结束" />
+  </options>
+  <options id="2005" name="页面展现拓扑、业务流程拓扑、组件制作、组件配置拓扑">
+    <option id="100" name="工单竞拍" />
+    <option id="101" name="工单分配" />
+    <option id="110" name="平台配置" />
+    <option id="120" name="单元测试确认" />
+    <option id="130" name="交易功能确认" />
+    <option id="140" name="工单结算" />
+    <option id="150" name="拓扑维护" />
+    <option id="160" name="组件维护" />
+    <option id="190" name="工单结束" />
+  </options>
+  <options id="2006" name="单元测试">
+    <option id="100" name="工单竞拍" />
+    <option id="101" name="工单分配" />
+    <option id="110" name="单元测试" />
+    <option id="120" name="交易功能确认" />
+    <option id="130" name="工单结算" />
+    <option id="140" name="交易维护" />
+    <option id="190" name="工单结束" />
+  </options>
+  <options id="2007" name="集成测试">
+    <option id="100" name="工单竞拍" />
+    <option id="101" name="工单分配" />
+    <option id="110" name="集成测试" />
+    <option id="120" name="系统确认" />
+    <option id="180" name="工单结算" />
+    <option id="190" name="工单结束" />
+  </options>
+  <options id="2008" name="项目实施">
+    <option id="100" name="工单竞拍" />
+    <option id="101" name="工单分配" />
+    <option id="110" name="现场环境搭建" />
+    <option id="120" name="签试运行报告" />
+    <option id="130" name="现场测试" />
+    <option id="140" name="问题处理" />
+    <option id="150" name="签运行报告" />
+    <option id="180" name="工单结算" />
+    <option id="190" name="工单结束" />
+  </options>
+  <options id="2009" name="软件超市产品类型">
+    <option id="0" name="非软件产品" />
+    <option id="1" name="软件产品" />
+  </options>
+  <options id="2010" name="评价监控类型">
+    <option id="1" name="工作速度(单位：分钟)" />
+    <option id="2" name="返工次数(单位：次数)" />
+  </options>
+  <options id="2011" name="开发工单">
+    <option id="100" name="工单竞拍" />
+    <option id="101" name="工单分配" />
+    <option id="110" name="工单开发" />
+    <option id="130" name="功能确认" />
+    <option id="140" name="工单结算" />
+    <option id="150" name="开发维护" />
+    <option id="190" name="工单结束" />
+  </options>
+  <options id="2012" name="详细设计工单">
+    <option id="100" name="工单竞拍" />
+    <option id="101" name="工单分配" />
+    <option id="110" name="详细设计编写" />
+    <option id="120" name="开发准备" />
+    <option id="130" name="开发管理" />
+    <option id="140" name="集成测试" />
+    <option id="150" name="客户确认" />
+    <option id="160" name="工单结算" />
+    <option id="170" name="工单结束" />
+  </options>
+  <options id="2020" name="项目解决方案">
+    <option id="100" name="方案提交待审核 " />
+    <option id="110" name="方案审核通过" />
+    <option id="120" name="方案被采纳需修改" />
+    <option id="130" name="方案中标" />
+    <option id="140" name="工单结算" />
+  </options>
+  <options id="2021" name="业务需求分析">
+    <option id="100" name="文档提交待审核" />
+    <option id="110" name="文档occs审核通过" />
+    <option id="120" name="文档客户审核通过" />
+    <option id="130" name="工单结算" />
+  </options>
+  <options id="2022" name="概要设计">
+    <option id="100" name="文档提交待审核" />
+    <option id="110" name="文档需求分析审核通过" />
+    <option id="120" name="文档客户审核通过" />
+    <option id="130" name="项目开发完成（集成测试无问题）" />
+    <option id="140" name="项目客户验收通过" />
+    <option id="150" name="项目实施完成（待定）" />
+    <option id="160" name="工单结算" />
+  </options>
+  <options id="2023" name="业务功能拓扑">
+    <option id="100" name="报告提交审核" />
+    <option id="110" name="报告系统设计审核通过" />
+    <option id="120" name="交易开发详细设计审核通过" />
+    <option id="130" name="交易开发系统设计审核通过" />
+    <option id="140" name="交易开发客户验收通过" />
+    <option id="150" name="项目开发完成（集成测试无问题）" />
+    <option id="160" name="项目客户验收通过" />
+    <option id="170" name="项目实施完成（待定）" />
+    <option id="180" name="工单结算" />
+  </options>
+  <options id="2024" name="页面展现拓扑、业务流程拓扑、组件制作、组件配置拓扑">
+    <option id="100" name="报告提交审核" />
+    <option id="110" name="报告详细设计审核通过" />
+    <option id="120" name="交易开发完成" />
+    <option id="130" name="交易开发系统设计审核通过" />
+    <option id="140" name="交易开发客户验收通过" />
+    <option id="150" name="项目开发完成（集成测试无问题）" />
+    <option id="160" name="项目客户验收通过" />
+    <option id="170" name="项目实施完成（待定）" />
+    <option id="180" name="工单结算" />
+  </options>
+  <options id="2025" name="单元测试">
+    <option id="100" name="报告提交审核" />
+    <option id="110" name="报告详细设计审核通过" />
+    <option id="120" name="交易开发完成" />
+    <option id="130" name="交易开发系统设计审核通过" />
+    <option id="140" name="交易开发客户验收通过" />
+    <option id="150" name="项目开发完成（集成测试通过）" />
+    <option id="160" name="项目客户验收通过" />
+    <option id="170" name="项目实施完成（待定）" />
+    <option id="180" name="工单结算" />
+  </options>
+  <options id="2026" name="集成测试">
+    <option id="100" name="报告提交审核" />
+    <option id="110" name="报告系统设计审核通过" />
+    <option id="120" name="项目开发完成（集成测试无问题）" />
+    <option id="130" name="项目客户验收通过" />
+    <option id="140" name="项目实施完成（待定）" />
+    <option id="150" name="工单结算" />
+  </options>
+  <options id="2027" name="详细设计">
+    <option id="100" name="文档提交待审核" />
+    <option id="110" name="文档概要设计审核通过" />
+    <option id="120" name="文档客户审核通过" />
+    <option id="130" name="模块交易开发完成" />
+    <option id="140" name="模块交易概要设计审核通过" />
+    <option id="150" name="模块交易客户审核通过" />
+    <option id="160" name="项目开发完成（集成测试无问题）" />
+    <option id="170" name="项目实施完成（待定）" />
+    <option id="180" name="工单结算" />
+  </options>
+</datalist>

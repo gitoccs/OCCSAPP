@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PersonIconCell" rowHeight="120" id="gZY-2p-ZHe">
+            <rect key="frame" x="0.0" y="0.0" width="603" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gZY-2p-ZHe" id="6xf-QP-aJr">
+                <rect key="frame" x="0.0" y="0.0" width="603" height="119.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IaE-Qd-fNv">
+                        <rect key="frame" x="25" y="18" width="85" height="85"/>
+                        <animations/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hiw-Ne-qLo">
+                        <rect key="frame" x="148" y="47.5" width="390" height="24"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9v-xq-w6E">
+                        <rect key="frame" x="546" y="44" width="32" height="32"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="4eB-Ez-2ex"/>
+                            <constraint firstAttribute="width" constant="32" id="GyJ-jd-bTT"/>
+                        </constraints>
+                        <state key="normal" image="right"/>
+                    </button>
+                </subviews>
+                <animations/>
+                <color key="backgroundColor" red="0.11042865953947369" green="0.84272203947368418" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="c9v-xq-w6E" firstAttribute="centerY" secondItem="6xf-QP-aJr" secondAttribute="centerY" constant="0.25" id="IQI-ts-d1w"/>
+                    <constraint firstItem="Hiw-Ne-qLo" firstAttribute="centerY" secondItem="6xf-QP-aJr" secondAttribute="centerY" constant="0.25" id="i5E-cD-jGm"/>
+                    <constraint firstItem="Hiw-Ne-qLo" firstAttribute="leading" secondItem="6xf-QP-aJr" secondAttribute="leadingMargin" constant="140" id="nwT-Sr-uE1"/>
+                    <constraint firstItem="c9v-xq-w6E" firstAttribute="leading" secondItem="Hiw-Ne-qLo" secondAttribute="trailing" constant="8" id="oxG-WI-K1A"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="c9v-xq-w6E" secondAttribute="trailing" constant="17" id="xgj-u4-lSg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <point key="canvasLocation" x="350.5" y="-12"/>
+        </tableViewCell>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+    </objects>
+    <resources>
+        <image name="right" width="44" height="44"/>
+    </resources>
+</document>

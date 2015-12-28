@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/yalecss.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+</head>
+
+<body style="background-color: #eaeaea">
+
+    <div data-role="page" id="person-main-listview">
+        <div data-role="main" class="ui-content">
+            <ul class="list-group">
+                <li class="list-group-item noPadding">
+                    <div style="height: 54px">
+                        <img src="img/icon_occs_big.png" width="54px" height="54px" alt="" />
+                        <img src="img/setting-icon.png" id="settingbtn" class="pull-right" style="position: absolute; right: 0;" width="54px" height="54px">
+                    </div>
+                </li>
+                <li class="noPadding list-group-item">
+                    <div class="diy-slideshow"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.xml2json.js"></script>
+<script src="js/setting.js"></script>
+<script src="js/tools.js"></script>
+<script>
+    var counter, $items, numItems, sliderAniInterval, listViewObj, sliderShowObj;
+    var showCurrent;
+
+    var refleshInterval = function () {
+        if (sliderAniInterval) {
+            clearInterval(sliderAniInterval);
+        }
+        sliderAniInterval = setInterval(function () {
+            counter++;
+            showCurrent();
+        }, sliderInterval);
+    };
+
+    $(function () {
+        $("#settingbtn").hide();
+        var adXml = "MobileAPI.asmx/GetAD";
+        var adPara = {keyword: keyword};
+
+        $.loadXML(adXml, adPara, "get", function (xml) {
+            var obj = $.xml2json(xml, true);
+            sliderShowObj = obj.sliderShowItemsList;
+            var htmlStr = "";
+            for (var i = 0; i < sliderShowObj[0].slider.length; i++) {
+                var slider = sliderShowObj[0].slider[i];
+                var src = slider.src[0].text;
+                var figcaption = slider.figcaption[0].text;
+                var showStr = '';
+                // console.log($(window).width() + "    " + $(window).height());
+                if (i == 0) {
+                    showStr = ' class="show"'
+                }
+                htmlStr += '<figure' + showStr + '><img src="' + src + '" alt="" width="'
+                        + $(window).width()
+                        + '" height="' + $(window).width() / 2
+                        + '"/><figcaption>'
+                        + figcaption + '</figcaption> </figure>'
+            }
+
+            htmlStr += '<span class="prev">«</span> <span class="next">»</span>';
+
+            $('div.diy-slideshow').html(htmlStr);
+
+            var listXml = "personMain.xml";
+            var listPara = {keyword: keyword};
+
+            $.loadXML(listXml, listPara, "get", function (xml) {
+                var obj = $.xml2json(xml, true);
+                listViewObj = obj.listView;
+                for (var i = 0; i < listViewObj[0].item.length; i++) {
+                    htmlStr = "";
+                    var item = listViewObj[0].item[i];
+                    var src = item.src[0].text;
+                    var title = item.title[0].text;
+                    var text = '......';
+                    var badge = 0;
+                    var lasttime = "";
+
+                    htmlStr += '<button class="list-group-item"><div class="media-left media-middle">'
+                            + '<a href="#"><span class="badge pull-right">'
+                            + badge + '</span><img class="media-object" src="'
+                            + src + '" alt="..." width="54px" height="54px"> </a>'
+                            + '</div> <div class="listViewCell01"> <p class="listViewCell01-title">'
+                            + title + '</p> <p class="listViewCell01-text">'
+                            + text
+                            + '</p> </div> <div class="listViewCell01-timetxt">'
+                            + lasttime + '</div> </button>'
+                    $('ul.list-group').append(htmlStr);
+                }
+                updatebadge();
+                updateSysMessage();
+
+                counter = 0;
+                $items = $('.diy-slideshow figure');// a collection of all of the slides, caching for performance
+                numItems = $items.length;// total number of slides
+                // add click events to prev &amp; next buttons
+                $('.next').on('click', function () {
+                    counter++;
+                    showCurrent();
+                });
+                $('.prev').on('click', function () {
+                    counter--;
+                    showCurrent();
+                });
+
+                $('button.list-group-item').on('click', function () {
+                    var title = $(this).find("p.listViewCell01-title").text();
+
+                    switch (title) {
+                        case '适合我的工单':
+                            console.log("go action");
+                            window.location.href = 'action://' + "newIntent" + "?" + "GongdanSuitable";
+                            break;
+                        case '活动信息':
+                            console.log("go action");
+                            window.location.href = 'action://' + "newIntent" + "?" + "Activity";
+                            break;
+                        case '系统通知':
+                                console.log($('.listViewCell01-text').eq(2).html());
+                            if ($('.listViewCell01-text').eq(2).html() == "没有系统信息") {
+                                break;
+                            }
+                            console.log("go action");
+                            window.location.href = 'action://' + "newIntent" + "?" + "SysNotification";
+                            break;
+                    }
+                });
+
+                if ('ontouchstart' in window) {
+                    $(".diy-slideshow").swipe({
+                        swipeLeft: function () {
+                            counter++;
+                            showCurrent();
+                        },
+                        swipeRight: function () {
+                            counter--;
+                            showCurrent();
+                        }
+                    });
+                }
+
+                refleshInterval();
+            });
+
+        });
+
+        /** this function is what cycles the slides,
+         showing the next or previous slide and hiding all the others **/
+        showCurrent = function () {
+            // calculates the actual index of the element to show
+            var itemToShow = Math.abs(counter % numItems);
+            // remove .show from whichever element currently has it
+            $items.removeClass('show');
+            // add .show only to the current slide
+//            console.log(numItems + "  " + counter);
+            $items.eq(itemToShow).addClass('show');
+            refleshInterval();
+        };
+        
+        if (getMobileOperatingSystem() == "Android"){
+            $("#settingbtn").show();
+            $(document).on("click","#settingbtn", function(){
+                // window.location.href = 'action://' + "newIntent" + "?" + "Setting";
+                console.log('action://' + "showLeftDrawer" + "?" + "Setting");
+                window.location.href = 'action://' + "showLeftDrawer" + "?" + "Setting";
+            });
+        }
+    });
+
+    var updateSysMessage = function () {
+        var sysMesIndex = 2
+        var unseenMesCount = parseInt($.urlGet()["note_unseen"]);
+        var allMesCount = parseInt($.urlGet()["note_count"]);
+        if (isNaN(allMesCount) || allMesCount == 0) {
+            $('.badge').eq(sysMesIndex).hide();
+            $('.listViewCell01-text').eq(sysMesIndex).html("没有通知信息");
+            $('.listViewCell01-timetxt').eq(sysMesIndex).hide();
+        } else {
+            if (unseenMesCount == 0) {
+                $('.badge').eq(sysMesIndex).hide();
+            } else {
+                $('.badge').eq(sysMesIndex).show();
+                $('.badge').eq(sysMesIndex).html(unseenMesCount);
+            }
+            var mesStr = decodeURIComponent($.urlGet()["note_msg"]);
+            var dateStr = decodeURIComponent($.urlGet()["note_date"]);
+            $('.listViewCell01-text').eq(sysMesIndex).html(trimText(mesStr));
+            $('.listViewCell01-timetxt').eq(sysMesIndex).show();
+            $('.listViewCell01-timetxt').eq(sysMesIndex).html(trimText(dateStr));
+        }
+    }
+    
+    var updateSuitableGongdan = function () {
+        var sysGongdan = 0
+        var unseenGongdanCount = parseInt($.urlGet()["gd_unseen"]);
+        var allGongdanCount = parseInt($.urlGet()["gd_count"]);
+        if (isNaN(allGongdanCount) || allGongdanCount == 0) {
+            $('.badge').eq(sysGongdan).hide();
+            $('.listViewCell01-text').eq(sysGongdan).html("尚无推荐的工单");
+            $('.listViewCell01-timetxt').eq(sysGongdan).hide();
+        } else {
+            if (unseenGongdanCount == 0) {
+                $('.badge').eq(sysGongdan).hide();
+            } else {
+                $('.badge').eq(sysGongdan).show();
+                $('.badge').eq(sysGongdan).html(unseenGongdanCount);
+            }
+            var mesStr = decodeURIComponent($.urlGet()["gd_title"]);
+            var dateStr = decodeURIComponent($.urlGet()["gd_date"]);
+            $('.listViewCell01-text').eq(sysGongdan).html(trimText(mesStr));
+            $('.listViewCell01-timetxt').eq(sysGongdan).show();
+            $('.listViewCell01-timetxt').eq(sysGongdan).html(trimText(dateStr));
+        }
+    }
+
+    var updatebadge = function () {
+        var activityIndex = 1;
+        var activityXml = "MobileAPI.asmx/GetActivity";
+        var activityPara = {keyword: keyword};
+        var $windowWidth = $(window).width();
+        var $activityBadge = $('.badge').eq(activityIndex);
+        $activityBadge.css("background-color","#cdcdcd");
+        $activityBadge.css("left",$windowWidth - 120);
+        
+        $.loadXML(activityXml, activityPara, "get", function (xml) {
+            var obj = $.xml2json(xml, true);
+            var activityList = obj.listView[0].item;
+            if (!activityList || activityList.details == 0) {
+                $('.listViewCell01-text').eq(activityIndex).html("无活动信息");
+                $activityBadge.hide();
+                $('.listViewCell01-timetxt').eq(activityIndex).hide();
+                return;
+            }
+            var activityBadge = "现在有" + obj.listView[0].item.length + "个活动";
+            var activityText = trimText(obj.listView[0].item[0].title[0].text);
+            $('.listViewCell01-timetxt').eq(activityIndex).show();
+            $('.listViewCell01-text').eq(activityIndex).html(activityText);
+            if (activityBadge == 0) {
+                $activityBadge.hide();
+            } else {
+                $activityBadge.show();
+                $activityBadge.html(activityBadge);
+            }
+        });
+        
+        var typeNum = $.urlGet()["typeNum"];
+        if( typeNum == 1){
+            updateSuitableGongdan();
+        }else{
+            $('ul button').eq(0).hide();  
+        }
+    }
+    var trimText = function (text) {
+        if (text.length > 20) {
+            return text.substr(0, 20) + "......";
+        } else {
+            return text;
+        }
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/yalecss.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+</head>
+<body>
+
+<div id="activityMainDiv">
+    <div class="tcontent" id="page1">
+
+    </div>
+</div>
+
+</body>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.xml2json.js"></script>
+<script src="js/setting.js"></script>
+<script src="js/tools.js"></script>
+<script>
+    var linkArray, titleArray;
+    $(function () {
+        var adXml = "MobileAPI.asmx/GetActivity";
+        var adPara = {keyword: keyword};
+        
+        $(document).on("click",".activity",function(){
+            var id = $(this).data("acid");
+            window.location.href = "action://" + "showWeb" + "?" + titleArray[id] + "|" + linkArray[id];
+            console.log("action://" + "showWeb" + "?" + titleArray[id] + "|" + linkArray[id]);
+        });
+        
+        $.loadXML(adXml, adPara, "get", function (xml) {
+            var obj = $.xml2json(xml, true);
+            var activityObj = obj.listView[0].item;
+            var htmlStr = "";
+            console.log(activityObj[0].text[0][0].text);
+            linkArray = [];
+            titleArray = [];
+            for(var i=0; i<activityObj.length; i++){
+                var title = activityObj[i].title[0].text;
+                var src = activityObj[i].src[0].text;
+                var text = activityObj[i].text[0][0].text;
+                var link = activityObj[i].url[0].text;
+                linkArray.push(link);
+                titleArray.push(title);
+                htmlStr += '<button class="block radius1 activity" ';
+                htmlStr += 'data-acid=' + i + '>';
+                htmlStr += '<div class="title3 underline1 ">' + title + '</div>';
+                htmlStr += '<img src="' + src + '" align="left">';
+                htmlStr += '<div style="height: 80px">';
+                htmlStr += text;
+                htmlStr += '</div>';
+                htmlStr += '</button>';
+            }
+            $('.tcontent').html(htmlStr);
+        });
+    });
+</script>
+</html>

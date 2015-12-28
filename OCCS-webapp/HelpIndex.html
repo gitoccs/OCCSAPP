@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/yalecss.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+</head>
+<body>
+<div id="helpIndexMainButtons">
+</div>
+<div id="helpSliderShow" class="carousel slide" data-ride="carousel">
+
+    <!-- Wrapper for slides -->
+
+</div>
+</body>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.xml2json.js"></script>
+<script src="js/setting.js"></script>
+<script src="js/tools.js"></script>
+<script>
+    var folderObj = [];
+    var strLen = 5;
+    $(function () {
+        var helpXML = "helpFolder.xml";
+        var helpPar = {};
+        $.loadXML(helpXML, helpPar, "get", function (xml) {
+            setpage1();
+            var obj = $.xml2json(xml, true);
+            var buttonItems = obj.buttonItems;
+            htmlStr = ""
+            for (var i = 0; i < buttonItems[0].item.length; i++) {
+                var button = buttonItems[0].item[i];
+                var folderName = button.folder[0].text;
+                var count = button.count[0].text;
+                var typeStr = button.type[0].text;
+                var obj = {folder: folderName, count: count, type: typeStr};
+                folderObj.push(obj);
+                htmlStr += '<button type="button" class="btn btn-lg btn-primary">' + folderName + '</button><br/>'
+            }
+
+            $('#helpIndexMainButtons').html(htmlStr);
+
+            middleMainBtns();
+            $('#helpIndexMainButtons button').on("click", function () {
+                var str = $(this).html();
+                var count = -1;
+                var type = "";
+                for (var i = 0; i < folderObj.length; i++) {
+                    if (str == folderObj[i].folder) {
+                        count = folderObj[i].count;
+                        type = folderObj[i].type;
+                        break;
+                    }
+                }
+
+                if (type != "" && count > 0) {
+                    var picAry = []
+                    for (var i = 0; i < count; i++) {
+                        var picStr = str + "_" + getNumLen(i) + "." + type;
+                        console.log(picStr);
+                        picAry.push(picStr);
+                    }
+
+                    if (picAry.length > 0) {
+                        var sliderHtml = "";
+                        sliderHtml += '<div class="carousel-inner" role="listbox">';
+                        for(var i=0; i< picAry.length; i++){
+                            var classStr = ""
+                            if(i==0){
+                                classStr = "active";
+                            }
+                            sliderHtml += '<div class="item ' + classStr + '">';
+                            sliderHtml += '<img src="helpFolder/'+ str +'/' + picAry[i] + '" alt="...">';
+                            sliderHtml += '</div>';
+                        }
+
+                        sliderHtml += '</div>';
+                        sliderHtml += '<a class="left carousel-control" href="#helpSliderShow" role="button" data-slide="prev">'
+                                + '<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>'
+                                + '<span class="sr-only">Previous</span>'
+                                + '</a>'
+                                + '<a class="right carousel-control" href="#helpSliderShow" role="button" data-slide="next">'
+                                + '<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>'
+                                + '<span class="sr-only">Next</span>'
+                                + '</a>';
+                        $('#helpSliderShow').html(sliderHtml);
+                        setpage2();
+                    }
+                }
+            });
+        });
+    });
+
+    function getNumLen(num) {
+        var str = num.toString();
+        var output = str;
+        for (var i = str.length; i < strLen; i++) {
+            output = "0" + output;
+        }
+        return output;
+    }
+
+    var setpage1 = function () {
+        $('#helpSliderShow').fadeOut(300);
+        $('#helpIndexMainButtons').fadeIn(300, function () {
+            window.location.href = 'info://' + "page" + "?" + "page1";
+        });
+    };
+
+    var setpage2 = function () {
+        $('#helpIndexMainButtons').fadeOut(300);
+        $('#helpSliderShow').fadeIn(300, function() {
+            window.location.href = 'info://' + "page" + "?" + "page2";
+        });
+    };
+
+
+    function middleMainBtns() {
+        var divWidth = $('#helpIndexMainButtons').width();
+        var divHeight = $('#helpIndexMainButtons').height();
+        console.log(divWidth + "    " + divHeight);
+        $('#helpIndexMainButtons').css("margin-top", -divHeight / 2);
+        $('#helpIndexMainButtons').css("margin-left", -divWidth / 2);
+        $('#helpIndexMainButtons').css("width", divWidth);
+        $('#helpIndexMainButtons').css("height", divHeight);
+    }
+</script>
+</html>

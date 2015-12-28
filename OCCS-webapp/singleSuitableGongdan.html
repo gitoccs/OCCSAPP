@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/yalecss.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="suitable_gongdan_main tcontent">
+
+    </div>
+</body>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.xml2json.js"></script>
+<script src="js/setting.js"></script>
+<script src="js/tools.js"></script>
+<script>
+    var workid, username, email, mobile, key, typeNum;
+	$(function () {
+		workid = $.urlGet()["workid"];
+		username = decodeURIComponent($.urlGet()["name"]);
+		mobile = $.urlGet()["phoneNum"];
+		key = $.urlGet()["key"];
+		typeNum = $.urlGet()["typeNum"];
+		
+		var projectDetailAPI = "MobileAPI.asmx/GetProjectDetailsForV1";
+        var projectDetailPara = {
+			keyword: keyword,
+			workid: workid,
+			ispublic: 1
+		};
+		
+		$.loadXML(projectDetailAPI, projectDetailPara, "get", function (xml) {
+            var obj = $.xml2json(xml, true);
+            var results = obj.details[0];
+			var gongdan = getGongdanInfo(results);
+
+            var htmlStr = "";
+			htmlStr += '<div class="block radius1 gcgongdanItem">';
+			htmlStr += '<div class="title3 underline1">' + gongdan.title + '<span class="price">' 
+					+ gongdan.balance
+					+ '</span></div><p><span class="inner_title">工单类型：</span>' + gongdan.type
+					+ '</p><p><span class="inner_title">所属项目：</span>' + gongdan.project
+					+ '</p><p class="rela"><span class="inner_title">开发周期：</span>' + gongdan.days;
+	
+			var gongdanAdded = results.addtime[0].text || "";
+			htmlStr += '<p><span class="inner_title">发布时间：</span>' + gongdanAdded + '</p>';
+			var gongdanEnddate = results.deadline[0].text || "";
+			htmlStr += '<p><span class="inner_title">截止时间：</span>' + gongdanEnddate + '</p>';
+	
+			var gongdanDetail = results.detail[0].text || "";
+			htmlStr += '<p><span class="inner_title">工单描述：</span>' + gongdanDetail;
+	
+			if (gongdan.status == "已完成") {
+				htmlStr += '<span class="showtime">已完成</span>';
+				htmlStr += '</p></div>';
+			} else {
+                var jingbiao = results.jingbiao[0]
+                var jingbiaoNum = Object.keys(jingbiao).length / 2;
+                htmlStr += '</p></div>';
+                htmlStr += '<div class="block radius1"><p class="rela underline1">'
+                        + '<span class="inner_title">抢单会员列表：</span></p>';
+                var jbPersonAry = [];
+                if(jingbiaoNum > 0){
+                    for(var i=0; i<jingbiaoNum; i++){
+                        var jingbiaoName = jingbiao["jbperson" + i][0].text;
+                        var jingbiaoTime = jingbiao["jbtime" + i][0].text;
+                        jbPersonAry.push(jingbiaoName);
+                        htmlStr +='<p><span class="inner_title">' + jingbiaoName + '</span>'
+                                + '<span class="showtime">' + jingbiaoTime + '</span>'
+                                + '</p>';
+                    }
+                    htmlStr += '</div>';
+                }else{
+                    htmlStr += '</p></div>';
+                    htmlStr += '<div class="block radius1"><p class="rela underline1">'
+                            + '<span class="inner_title">抢单会员列表：</span><span class="showtime">'
+                            + '现无人抢单</span></p></div>';
+                }
+				if (gongdan.seconds != "") {
+					var timeLeft = showDateSeconds(parseInt(gongdan.seconds));
+					var timestr1 = timeLeft.days + "天" + timeLeft.hours + "小时" + timeLeft.minutes + "分钟" 
+					+ timeLeft.seconds + "秒";
+					htmlStr += '<span class="showtime">' + timeLeft.status + '<span class="timestamp" '
+							+'data-seconds=' + gongdan.seconds + '>' + timestr1 + '</span></span>';
+					htmlStr += '</p></div>';
+				}
+                
+                if (jbPersonAry.length > 0 && $.inArray(username, jbPersonAry) > -1){
+                    htmlStr += '<div class="block nobgcolor"><div class="next radius1 link1" '
+						+ 'style="background-color:#bbbbbb;"><a href="#">您已抢单</a></div></div>';
+                }else{
+                    htmlStr += '<div class="block nobgcolor"><div class="next radius1 link1 qdBtn" '
+						+ 'style="background-color:#0177d9;"><a href="#">我要抢单</a></div></div>';
+                }
+				
+            }
+            
+            $('.suitable_gongdan_main').html(htmlStr);
+            
+            secondInterval = runTimeInterval($('.timestamp'));
+            $('.qdBtn').on('click',function(){
+            var qdurl = "MobileAPI.asmx/UserQiangDan";
+            var qdpara = {
+                keyword: keyword,
+                key: $.urlGet()["key"],
+                id: gongdan.id,
+                typeId: gongdan.typeid
+            };
+
+            $.loadXML(qdurl, qdpara, "post", function (xml) {
+                var obj = $.xml2json(xml, true);
+                var msg;
+                if (obj.status[0].text == "1"){
+                    msg = obj.msg[0].text;
+                }else{
+                    msg = obj.msg[0].text;
+                }
+                console.log(msg);
+                window.location.href = 'action://' + "newToast" + "?" + msg;
+            });
+        });
+		});
+	});
+	
+	var getGongdanInfo = function (obj) {
+        var gongdanTitle, gongdanid, gongdanBalance, gongdanType, gongdanTypeid, 
+        gongdanProject, gongdanDays, gongdanSeconds, gongdanStatus = "";
+        gongdanid = obj.id[0].text || "";
+        if (obj.workName)
+            gongdanTitle = obj.workName[0].text || "";
+        else
+            gongdanTitle = obj.worktitle[0].text || "";
+
+        gongdanBalance = obj.balances[0].text || "";
+        if (contains(gongdanBalance, "%", true)) {
+            gongdanBalance += "项目总金额";
+        }
+
+        if (obj.worktype)
+            gongdanType = obj.worktype[0].text || "";
+        else
+            gongdanType = obj.typename[0].text || "";
+
+        if(obj.typeid)
+            gongdanTypeid = obj.typeid[0].text || "";
+
+        if (obj.demandName)
+            gongdanProject = obj.demandName[0].text || "";
+        else
+            gongdanProject = obj.projectname[0].text || "";
+
+        gongdanDays = obj.workdays[0].text || "";
+
+        if (obj.fenddate)
+            gongdanSeconds = obj.fenddate[0].text || "";
+        else
+            gongdanSeconds = obj.seconds[0].text || "";
+
+        if (obj.workstatus)
+            gongdanStatus = obj.workstatus[0].text || "";
+        return {
+            id: gongdanid,
+            title: gongdanTitle,
+            balance: gongdanBalance,
+            project: gongdanProject,
+            type: gongdanType,
+            typeid: gongdanTypeid,
+            days: gongdanDays,
+            seconds: gongdanSeconds,
+            status: gongdanStatus
+        };
+    };
+	
+	function contains(string, substr, isIgnoreCase) {
+        if (isIgnoreCase) {
+            string = string.toLowerCase();
+            substr = substr.toLowerCase();
+        }
+        var startChar = substr.substring(0, 1);
+        var strLen = substr.length;
+        for (var j = 0; j < string.length - strLen + 1; j++) {
+            if (string.charAt(j) == startChar)//如果匹配起始字符,开始查找
+            {
+                if (string.substring(j, j + strLen) == substr)//如果从j开始的字符与str匹配，那ok
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    
+    var runTimeInterval = function($value){
+        var seed = window.setInterval(function () {
+            if ($value.length > 0) {
+                for (var i=0; i<$value.length; i++){
+                    var seconds = $value.eq(i).data('seconds');
+                    var timeLeft = showDateSeconds(seconds);
+                    // var timeLeft = dateDiffToTime(Date.now(), seconds);
+                    var timestr = timeLeft.days + "天" + timeLeft.hours 
+                    + "小时" + timeLeft.minutes + "分钟" + timeLeft.seconds + "秒";
+                    $value.eq(i).html(timestr);
+                }
+            } else {
+                window.clearInterval(seed);
+            }
+        }, 1000);
+        return seed;
+    };
+    
+    var showDateSeconds = function(seconds){
+        // console.log((timeStart - Date.now())/1000 + "     " + seconds);
+        return dateLeftSeconds(parseInt(seconds + (timeStart - Date.now())/1000));
+    }
+
+</script>
+
+</html>

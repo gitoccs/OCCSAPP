@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/yalecss.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+</head>
+<body>
+<div id="contactMainDiv">
+    <div class="form-group">
+        <label class="pull-left">您好：<span id="contactNameTxt">用户</span></label>
+    </div>
+    <br/>
+    <br/>
+
+    <div class="form-group">
+        <label for="responsetext" class="pull-left">意见反馈：</label>
+        <textarea id="responsetext" class="form-control" rows="3" placeholder="请输入您的意见或通过下面方式与我们联系"></textarea>
+    </div>
+    <button type="button" id="contactSubmit" class="btn btn-primary pull-right">提 交</button>
+</div>
+<br/>
+<br/>
+<br/>
+
+<div>
+    客服电话：400-058-6227
+</div>
+<div>
+    客服邮箱：kefu@occs.com.cn
+</div>
+<br/>
+
+<div class="alert alert-success contactSuccessAlert" role="alert"><strong>谢谢 ! </strong>您的意见已经被提交</div>
+
+</body>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.xml2json.js"></script>
+<script src="js/setting.js"></script>
+<script src="js/tools.js"></script>
+<script>
+    $(function () {
+        $('.contactSuccessAlert').hide();
+        $('#contactNameTxt').html(decodeURIComponent($.urlGet()["name"]));
+        $('#contactSubmit').on('click', function () {
+
+
+            if($('#responsetext').val() != ""){
+                var feedBackUrl = "MobileAPI.asmx/AddFeedback";
+                var feedBackPara = {
+                    keyword: keyword,
+                    key: $.urlGet()["key"],
+                    email: $.urlGet()["email"],
+                    mobile: $.urlGet()["phoneNum"],
+                    description: $('#responsetext').val()
+                };
+
+                console.log(feedBackPara);
+
+                $.loadXML(feedBackUrl, feedBackPara, "post", function (xml) {
+                    var obj = $.xml2json(xml, true);
+                    console.log(obj);
+                    if(obj.status[0].text == "1"){
+                        $('.contactSuccessAlert').fadeIn(300);
+                        setTimeout(hideSuccessAlert, 5000);
+                        $('#contactSubmit').attr('disabled',true); 
+                    }
+                });
+            }
+        });
+    });
+
+    var hideSuccessAlert = function () {
+        $('.contactSuccessAlert').fadeOut(300);
+        $('#contactSubmit').removeAttr('disabled'); 
+    }
+
+</script>
+</html>

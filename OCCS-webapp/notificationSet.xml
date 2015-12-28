@@ -1,0 +1,15 @@
+<results>
+    <switch>
+        <name>系统通知</name>
+        <status>on</status>
+    </switch>
+    <switch>
+        <name>项目通知</name>
+        <status>off</status>
+    </switch>
+    <switch>
+        <name>营销通知</name>
+        <status>off</status>
+    </switch>
+    ......
+</results>
