@@ -1,6 +1,10 @@
 [
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/menu/menu_log_in.xml",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/src/main/res/menu/menu_log_in.xml"
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_log_in.xml",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\src\\main\\res\\menu\\menu_log_in.xml"
+    },
+    {
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_log_in.xml",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\src\\main\\res\\menu\\menu_log_in.xml"
     }
 ]

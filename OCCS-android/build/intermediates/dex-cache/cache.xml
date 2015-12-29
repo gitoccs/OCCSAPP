@@ -1,2 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="C:\Users\liqiuze\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="C:\Work\OCCSAPP\OCCS-android\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.1_d2305c28777f82b5224fcb726c69217c150d6f2a.jar" />
+    </item>
+    <item
+        jar="C:\Work\OCCSAPP\OCCS-android\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="C:\Work\OCCSAPP\OCCS-android\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-22.2.1_1d8d201e2ae74e59614b6f09364ce0404f8a2e88.jar" />
+    </item>
+    <item
+        jar="C:\Work\OCCSAPP\OCCS-android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="C:\Work\OCCSAPP\OCCS-android\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-22.2.1_d1f2da9533e412b2a7ee2c7fb08d4b91cf7a62c6.jar" />
+    </item>
+    <item
+        jar="C:\Work\OCCSAPP\OCCS-android\app\libs\jpush-sdk-release1.7.5.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c10bf1a834e7a2caa3832c29b530e1ae7cfad0a2">
+        <dex dex="C:\Work\OCCSAPP\OCCS-android\app\build\intermediates\pre-dexed\debug\jpush-sdk-release1.7.5_8621ba80a250f91e95758a80427913da54e2707a.jar" />
+    </item>
+    <item
+        jar="C:\Work\OCCSAPP\OCCS-android\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="C:\Work\OCCSAPP\OCCS-android\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.1_bb7965c83401496fefe9ab87b737ff2e40206430.jar" />
+    </item>
+
+</items>

@@ -1,166 +1,330 @@
 [
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/abc_spinner_textfield_background_material.xml",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_spinner_textfield_background_material.xml"
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_item_background_holo_light.xml"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/icon_occs_big.png",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/src/main/res/drawable/icon_occs_big.png"
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_btn_borderless_material.xml"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/login_btn_normal.xml",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/src/main/res/drawable/login_btn_normal.xml"
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_item_background_holo_dark.xml"
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_textfield_search_material.xml"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_dark.xml",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_list_selector_holo_dark.xml"
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_cab_background_top_material.xml"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/email01.png",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/src/main/res/drawable/email01.png"
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\searchgray_01.png",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\src\\main\\res\\drawable\\searchgray_01.png"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/abc_textfield_search_material.xml",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_textfield_search_material.xml"
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\agree_01.png",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\src\\main\\res\\drawable\\agree_01.png"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_dark.xml",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\register_btn_normal.xml",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\src\\main\\res\\drawable\\register_btn_normal.xml"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/occslogo.png",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/src/main/res/drawable/occslogo.png"
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\id_01.png",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\src\\main\\res\\drawable\\id_01.png"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_edit_text_material.xml"
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\iphone_01.png",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\src\\main\\res\\drawable\\iphone_01.png"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/my_custom_background.xml",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/src/main/res/drawable/my_custom_background.xml"
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\occslogo.png",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\src\\main\\res\\drawable\\occslogo.png"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_light.xml",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_list_selector_background_transition_holo_light.xml"
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_btn_radio_material.xml"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/abc_btn_default_mtrl_shape.xml",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_btn_default_mtrl_shape.xml"
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\my_custom_background.xml",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\src\\main\\res\\drawable\\my_custom_background.xml"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_light.xml",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_list_selector_holo_light.xml"
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_item_background_holo_dark.xml"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/abc_btn_check_material.xml",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_btn_check_material.xml"
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\check_01.png",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\src\\main\\res\\drawable\\check_01.png"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_switch_thumb_material.xml"
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_spinner_textfield_background_material.xml"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/post_01.png",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/src/main/res/drawable/post_01.png"
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_light.xml",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_dialog_material_background_light.xml"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/register_btn_normal.xml",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/src/main/res/drawable/register_btn_normal.xml"
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\my_custom_background2.xml",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\src\\main\\res\\drawable\\my_custom_background2.xml"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/id_01.png",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/src/main/res/drawable/id_01.png"
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/logout_btn_normal.xml",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/src/main/res/drawable/logout_btn_normal.xml"
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/agree_01.png",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/src/main/res/drawable/agree_01.png"
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_edit_text_material.xml"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/password_01.png",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/src/main/res/drawable/password_01.png"
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_btn_borderless_material.xml"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/demand_btn_normal.xml",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/src/main/res/drawable/demand_btn_normal.xml"
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\back_02.png",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\src\\main\\res\\drawable\\back_02.png"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_internal_bg.xml",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_cab_background_internal_bg.xml"
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_full_material.xml",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_ratingbar_full_material.xml"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background_dark.xml",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_dialog_material_background_dark.xml"
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_list_selector_holo_light.xml"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_tab_indicator_material.xml"
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_dark.xml",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_dialog_material_background_dark.xml"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/back_01.png",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/src/main/res/drawable/back_01.png"
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\classify_01.png",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\src\\main\\res\\drawable\\classify_01.png"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/user_01.png",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/src/main/res/drawable/user_01.png"
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\login_btn_normal.xml",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\src\\main\\res\\drawable\\login_btn_normal.xml"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/my_custom_background2.xml",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/src/main/res/drawable/my_custom_background2.xml"
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_full_material.xml",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_ratingbar_full_material.xml"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/searchgray_01.png",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/src/main/res/drawable/searchgray_01.png"
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\demand_btn_normal.xml",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\src\\main\\res\\drawable\\demand_btn_normal.xml"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_top_material.xml",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_cab_background_top_material.xml"
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/back_02.png",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/src/main/res/drawable/back_02.png"
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\email01.png",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\src\\main\\res\\drawable\\email01.png"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_light.xml",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_item_background_holo_light.xml"
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\logout_btn_normal.xml",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\src\\main\\res\\drawable\\logout_btn_normal.xml"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_btn_radio_material.xml"
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/iphone_01.png",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/src/main/res/drawable/iphone_01.png"
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\iphone_01.png",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\src\\main\\res\\drawable\\iphone_01.png"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/unagree_01.png",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/src/main/res/drawable/unagree_01.png"
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\back_01.png",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\src\\main\\res\\drawable\\back_01.png"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/abc_btn_borderless_material.xml",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_btn_borderless_material.xml"
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\post_01.png",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\src\\main\\res\\drawable\\post_01.png"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/check_01.png",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/src/main/res/drawable/check_01.png"
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_list_selector_holo_light.xml"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background_light.xml",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_dialog_material_background_light.xml"
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\searchgray_01.png",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\src\\main\\res\\drawable\\searchgray_01.png"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_full_material.xml",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_ratingbar_full_material.xml"
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
     },
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/drawable/classify_01.png",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/src/main/res/drawable/classify_01.png"
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\back_01.png",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\src\\main\\res\\drawable\\back_01.png"
+    },
+    {
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\post_01.png",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\src\\main\\res\\drawable\\post_01.png"
+    },
+    {
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\login_btn_normal.xml",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\src\\main\\res\\drawable\\login_btn_normal.xml"
+    },
+    {
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_occs_big.png",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\src\\main\\res\\drawable\\icon_occs_big.png"
+    },
+    {
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\check_01.png",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\src\\main\\res\\drawable\\check_01.png"
+    },
+    {
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_occs_big.png",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\src\\main\\res\\drawable\\icon_occs_big.png"
+    },
+    {
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\unagree_01.png",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\src\\main\\res\\drawable\\unagree_01.png"
+    },
+    {
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\back_02.png",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\src\\main\\res\\drawable\\back_02.png"
+    },
+    {
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\email01.png",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\src\\main\\res\\drawable\\email01.png"
+    },
+    {
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\classify_01.png",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\src\\main\\res\\drawable\\classify_01.png"
+    },
+    {
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\user_01.png",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\src\\main\\res\\drawable\\user_01.png"
+    },
+    {
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_dark.xml",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_dialog_material_background_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_light.xml",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_dialog_material_background_light.xml"
+    },
+    {
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\logout_btn_normal.xml",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\src\\main\\res\\drawable\\logout_btn_normal.xml"
+    },
+    {
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\agree_01.png",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\src\\main\\res\\drawable\\agree_01.png"
+    },
+    {
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\occslogo.png",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\src\\main\\res\\drawable\\occslogo.png"
+    },
+    {
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\my_custom_background.xml",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\src\\main\\res\\drawable\\my_custom_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\my_custom_background2.xml",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\src\\main\\res\\drawable\\my_custom_background2.xml"
+    },
+    {
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\user_01.png",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\src\\main\\res\\drawable\\user_01.png"
+    },
+    {
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\id_01.png",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\src\\main\\res\\drawable\\id_01.png"
+    },
+    {
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\password_01.png",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\src\\main\\res\\drawable\\password_01.png"
+    },
+    {
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\demand_btn_normal.xml",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\src\\main\\res\\drawable\\demand_btn_normal.xml"
+    },
+    {
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\unagree_01.png",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\src\\main\\res\\drawable\\unagree_01.png"
+    },
+    {
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\register_btn_normal.xml",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\src\\main\\res\\drawable\\register_btn_normal.xml"
+    },
+    {
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\password_01.png",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\src\\main\\res\\drawable\\password_01.png"
+    },
+    {
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\drawable\\abc_cab_background_top_material.xml"
     }
 ]

@@ -1,6 +1,10 @@
 [
     {
-        "merged": "/Users/yeliu/Projects/occs/OCCS-android/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/ic_launcher.png",
-        "source": "/Users/yeliu/Projects/occs/OCCS-android/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+        "merged": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\yeliu\\Projects\\occs\\OCCS-android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_launcher.png",
+        "source": "C:\\Work\\OCCSAPP\\OCCS-android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     }
 ]
