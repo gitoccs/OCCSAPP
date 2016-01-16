@@ -9,7 +9,7 @@ public class StartActivity extends SingleFragmentActivity {
     @Override
     protected Fragment createFragment() {
 
-        //开始的入口测试
+        //开始的入口测试1
         return new StartFragment();
     }
 }
