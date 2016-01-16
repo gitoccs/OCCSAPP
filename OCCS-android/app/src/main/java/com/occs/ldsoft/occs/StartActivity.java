@@ -8,6 +8,8 @@ import android.support.v4.app.Fragment;
 public class StartActivity extends SingleFragmentActivity {
     @Override
     protected Fragment createFragment() {
+
+        //开始的入口
         return new StartFragment();
     }
 }
